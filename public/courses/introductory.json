@@ -1,0 +1,117 @@
+{
+    "title": "INTRODUCTION",
+    "sections": {
+        "1": {
+            "title": "",
+            "iconTop": "<span class='mape'><img src='/assets/images/pretest/mape.svg' alt='mape' /></span>",
+            "className": "",
+            "content": "<p class='subtitle'>Dear Doctor,</p><p>Welcome to online training course on management of Tuberculosis offered by National TB control program, Pakistan.</p>",
+            "pretest": false,
+            "doctor": "man"
+        },
+        "2": {
+            "title": "",
+            "iconTop": "<span class='mape'><img src='/assets/images/pretest/mape.svg' alt='mape' /></span>",
+            "className": "screen2",
+            "content": "<p>National TB Control Program has developed this course to facilitate the health care providers, especially doctors, to learn the management of TB as per National guidelines and online reporting.</p>",
+            "pretest": false,
+            "doctor": "lady"
+        },
+        "3": {
+            "title": "<h2>Dear Doctor,</h2>",
+            "iconTop": "",
+            "className": "screen3",
+            "content": "<p>The course methodology is reading narrative portion,<br>scenario based interactive learning and exercise.</p><p>You are advised to carefully read the narrative portion<br> for understanding the guidelines on respective topics.</p><p>Then <strong class='green-clor'>START</strong> interactive learning portion, in which you<br> have to choose correct option(s). In case of choosing<br> incorrect option, the online facilitator will help you by highlighting the correct option along with some explanation. The case scenario is <br> followed by an exercise.</p><p>At the end of each module, there will also be a post evaluation.</p>",
+            "pretest": false,
+            "doctor": "man"
+        },
+        "4": {
+            "title": "",
+            "iconTop": "",
+            "className": "screen2 screen4",
+            "content": "<p>After the successful completion of each module, you will be able to <strong class='green-clor'> understand</strong> and  <strong class='green-clor'>apply</strong> your knowledge in TB patient management as per NTP guidelines.</p>",
+            "pretest": false,
+            "doctor": "lady"
+        },
+        "5": {
+            "title": "<h2>This course comprises</h2><h2>of 8 Modules</h2>",
+            "iconTop": "",
+            "className": "screen5",
+            "content": "<p>The course is designed to be interactive to promote active learning instead of reading information. There is narrative portion at the  start of each session to understand the guide - lines, followed by case scenarios and the post  test at the end of each session. </p>",
+            "pretest": false,
+            "doctor": "man"
+        },
+        "6": {
+            "title": "<h2>Following are the Modules</h2>",
+            "iconTop": "",
+            "className": "screen2 screen6",
+            "content": "<ul class='list'><li><span class='icon-number Introduction'><img src='assets/images/pretest/Introduction-icon.svg' alt='Introduction'></span><span class='s-number-text'><span class='green-clor s-number'>1.</span> Introduction to Basics of TB & Its Control in Pakistan.</span></li><li><span class='icon-number presumptive'><img src='assets/images/pretest/presumptive.svg' alt='presumptive'></span><span class='s-number-text '><span class='green-clor s-number'>2.</span> Identifying & Managing a “Presumptive TB Case” & “Diagnosing TB”</span></li><li><span class='icon-number'><img src='assets/images/pretest/classifying.svg' alt='Classifying'></span><span class='s-number-text'><span class='green-clor s-number'>3.</span> Classifying, Registering & Prescribing Anti–TB Medicine & Treatment Adherence.</span></li><li><span class='icon-number'><img src='assets/images/pretest/patient-icon.svg' alt='Patient'></span><span class='s-number-text'><span class='green-clor s-number'>4.</span> Patient Follow-Up at TB Care Facility & Managing Side Effects.</span></li><li><span class='icon-number'><img src='assets/images/pretest/treatment.svg' alt='treatment'></span><span class='s-number-text'><span class='green-clor s-number'>5.</span> Treatment Outcomes & Managing Patient Who Interrupt Treatment.</span></li><li><span class='icon-number'><img src='assets/images/pretest/bell-icon.svg' alt='bell'></span><span class='s-number-text'><span class='green-clor s-number'>6.</span> Mandatory TB Notification Act & How You Can Notify Online.</span></li><li><span class='icon-number'><img src='assets/images/pretest/lung-icon.svg' alt='lung'></span><span class='s-number-text'><span class='green-clor s-number'>7.</span> What is Latent TB infection & Its Management?</span></li><li><span class='icon-number'><img src='assets/images/pretest/drug-resistant.svg' alt='drug-resistant'></span><span class='s-number-text'><span class='green-clor s-number'>8.</span> Drug Resistant TB & Role of General Practitioners in Management of MDR-TB</span></li></ul>",
+            "pretest": false,
+            "doctor": "lady"
+        },
+        "7": {
+            "title": "",
+            "iconTop": "",
+            "className": "screen7",
+            "content": "<p>Before starting the course, there will be a <strong class='green-clor'>“pre-evaluation”</strong> which is a self-assessment of knowledge about TB & its management</p>",
+            "pretest": false,
+            "doctor": "man"
+        },
+        "8": {
+            "title": "",
+            "iconTop": "",
+            "className": "screen2 screen8",
+            "content": "<p>After completing each Module you are advised to take a <strong class='green-clor'>“post-evaluation”</strong> to assess the improvement in existing knowledge on TB management according to National guidelines.</p>",
+            "pretest": false,
+            "doctor": "lady"
+        },
+        "9": {
+            "title": "",
+            "iconTop": "",
+            "className": "screen9",
+            "content": "<p>After completion of the course, there will be a feedback for the evaluation of the course </p>",
+            "pretest": false,
+            "doctor": "man"
+        },
+        "10": {
+            "title": "",
+            "iconTop": "<span class='up-logo'><img src='/assets/images/pretest/logo.png' alt='logo'></span>",
+            "className": "screen2 screen10",
+            "content": "<p>Let Us Come & Take</p><p>“Pre-Evaluation”</p>",
+            "pretest": false,
+            "doctor": "lady"
+        },
+        "11": {
+            "title": "",
+            "iconTop": "<span class='q-number' id=''><span class='q-count'></span></span>",
+            "className": "screen2 screen11",
+            "content": "",
+            "pretest": true,
+            "doctor": ""
+        },
+        "12": {
+            "title": "",
+            "iconTop": "<span class='up-logo'><img src='/assets/images/pretest/logo.png' alt='logo'></span>",
+            "className": "screen2 screen16",
+            "content": "<p class='title-score'>Your score is</p><p class='score-number'>28/30</p><p class='title-score'>Thank you Doctor, for your effort!</p><p>Now click the button below to see the correct options. It will help you in identifying the areas where you need to focus more while taking the course.</p>",
+            "pretest": false,
+            "doctor": "lady"
+        },
+        "13": {
+            "title": "<h2>Correct Answers</h2>",
+            "iconTop": "",
+            "className": "screen2 screen13",
+            "content": "<ul class='answer-sheet'></ul>",
+            "pretest": false,
+            "doctor": ""
+        },
+        "14": {
+            "title": "<h2>Let’s Start<br> with the course.</h2>",
+            "iconTop": "",
+            "className": "screen2 screen15",
+            "content": "<p>To learn & understand Module 1</p>",
+            "pretest": false,
+            "doctor": "man"
+        }
+    }
+}

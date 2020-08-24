@@ -1,0 +1,8 @@
+{
+  "maxAttemptsExceedText": "Since you have selected incorrectly multiple times, I have marked the items that should be selected in green. Adjust your answers to match and then click Submit.",
+  "multipleIncorrectNoneCorrectText": "None of these items should be selected. Remove your selections and then click Submit.",
+  "correctFeedbackText": "Good work.",
+  "noSelectionFeedbackText": "Please select atleast one option to proceed",
+  "extraFeedbackText": "You have selected more items that you should not. Update your selections and then click Submit again.",
+  "missingFeedbackText": "You are missing some items that should be selected. Update your selections and then click Submit again."
+}

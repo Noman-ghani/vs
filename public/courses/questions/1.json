@@ -1,0 +1,196 @@
+{
+  "1": {
+    "type": "checkbox",
+    "correctFeedback": "Good work. you have selected correct items, click next to move on",
+    "incorrectFeedback": "You selected incorrect statement. It is not relevant to spread of TB. <br/><br/><b>Select again</b>",
+    "maxTries": 3,
+    "text": "Select the correct statement relevant to the spread of TB",
+    "options": [
+      {
+        "id": "1",
+        "text": "TB is a highly contagious, systemic disease.",
+        "feedback": "",
+        "correct": true
+      },
+      {
+        "id": "2",
+        "text": "Everyone exposed to the bacterium becomes infected and develop clinical symptoms.",
+        "feedback": "Not everyone becomes infected when exposed to TB patients. It depends on the quantity of droplets nuclei in air and the length of exposure.",
+        "correct": false
+      },
+      {
+        "id": "3",
+        "text": "TB bacteria are spread through the droplet nuclei from one person to another by coughing, sneezing, shouting and singing.",
+        "feedback": "",
+        "correct": true
+      },
+      {
+        "id": "4",
+        "text": "TB is also spread by hand shake, sharing food or drink, touching bed linens or toilet seats, kissing.",
+        "feedback": "TB does not spread by these means it spread through Air by coughing and sneezing when infected person does not cover his/her mouth during coughing and sneezing",
+        "correct": false
+      }
+    ]
+  },
+  "2": {
+    "type": "checkbox",
+    "correctFeedback": "Good work. you have selected correct items, click next to move on",
+    "incorrectFeedback": "You selected incorrect statement. It is not relevant to the pathogenesis of TB. <br/><br/><b>Select again</b>",
+    "maxTries": 3,
+    "text": "Select the correct statement relevant to the pathogenesis of TB",
+    "options": [
+      {
+        "id": "1",
+        "text": "When a person breathes in TB bacteria, the bacilli can settle in the lungs, begin to grow and multiply in the alveoli of lungs.",
+        "feedback": "",
+        "correct": true
+      },
+      {
+        "id": "2",
+        "text": "When a person breaths in TB bacilli, they kills the macrophages and spread into lungs within 2-3 days.",
+        "feedback": "TB bacilli when entered into body, the macrophages ingest them and limit their further spread and multiplication.",
+        "correct": false
+      },
+      {
+        "id": "3",
+        "text": "TB spreads from the primary lung lesion to other parts of the body via the blood stream, lymphatic.",
+        "feedback": "",
+        "correct": true
+      },
+      {
+        "id": "4",
+        "text": "The chance of becoming infected has no relation with immunity of infected person.  ",
+        "feedback": "The chance of becoming infected enhances when the person is immunocompromised like DM & HIV",
+        "correct": false
+      },
+      {
+        "id": "5",
+        "text": "Within 2 to 8 weeks,  macrophages ingest and surround the tubercle bacilli forming a granuloma",
+        "feedback": "",
+        "correct": true
+      }
+    ]
+  },
+  "3": {
+    "type": "checkbox",
+    "correctFeedback": "Good work. you have selected correct items, click next to move on",
+    "incorrectFeedback": "You selected incorrect statement. It is not relevant to sign and symptoms of Pulmonary TB. <br/><br/><b>Select again</b>",
+    "maxTries": 3,
+    "text": "Select the correct statement relevant statement for sign and symptoms of Pulmonary TB",
+    "options": [
+      {
+        "id": "1",
+        "text": "cough more than two or more weeks",
+        "feedback": "",
+        "correct": true
+      },
+      {
+        "id": "2",
+        "text": "Chest pain and fever",
+        "feedback": "Chest pain and fever are the associated symptoms when present with cough. without cough these  symptoms are not suggestive of TB",
+        "correct": false
+      },
+      {
+        "id": "3",
+        "text": "Cough of any duration with fever and weight loss",
+        "feedback": "",
+        "correct": true
+      },
+      {
+        "id": "4",
+        "text": "Cough of any duration with  hemoptysis",
+        "feedback": "",
+        "correct": true
+      },
+      {
+        "id": "5",
+        "text": "Hemoptysis and weight loss",
+        "feedback": "Hemoptysis and weight loss are the associated symptoms when present with cough. without cough these  symptoms are not suggestive of TB ",
+        "correct": false
+      }
+    ]
+  },
+  "4": {
+    "type": "checkbox",
+    "correctFeedback": "Good work. you have selected correct items, click next to move on",
+    "incorrectFeedback": "You selected incorrect statement. It is not relevant to sign and symptoms of extra Pulmonary TB. <br/><br/><b>Select again</b>",
+    "maxTries": 3,
+    "text": "Select the correct statement relevant to sign and symptoms of extra Pulmonary TB",
+    "options": [
+      {
+        "id": "1",
+        "text": "Fever, weight loss, Back pain and radiating pain",
+        "feedback": "Sign and symptoms are suggestive of TB spine",
+        "correct": true
+      },
+      {
+        "id": "2",
+        "text": "joints pain, joint swelling",
+        "feedback": "Joint pain and swelling without general symptoms of TB are not suggestive of TB",
+        "correct": false
+      },
+      {
+        "id": "3",
+        "text": "Fever, Weight loss, reduced appetite, (Abdominal pain, distention)",
+        "feedback": "Sign and symptoms are suggestive of abdominal TB",
+        "correct": true
+      },
+      {
+        "id": "4",
+        "text": "Diarrhea, Abdominal pain, vomiting",
+        "feedback": "Diarrhea and abdominal  without general symptoms of TB are not suggestive of TB",
+        "correct": false
+      },
+      {
+        "id": "5",
+        "text": "Fever, Fatigue, weight loss, Chest pain",
+        "feedback": "Sign and symptoms are suggestive of pleural TB",
+        "correct": true
+      },
+      {
+        "id": "6",
+        "text": "Chest pain, Shortness of breath.",
+        "feedback": "Chest pain and shortness of breath without general symptoms of TB are not suggestive of TB",
+        "correct": false
+      }
+    ]
+  },
+  "5": {
+    "type": "button",
+    "correctFeedback": "Good work. you have selected correct items, click next to move on",
+    "incorrectFeedback": "You selected incorrect statement. It is not relevant to sign and symptoms of extra Pulmonary TB. <br/><br/><b>Select again</b>",
+    "maxTries": 3,
+    "text": "Do you think Ms. Yasmin could be a TB patient?",
+    "options": [
+      {
+        "id": "1",
+        "text": "Yes",
+        "feedback": "",
+        "correct": true
+      },
+      {
+        "id": "2",
+        "text": "No",
+        "feedback": "",
+        "correct": false
+      }
+    ],
+    "subQuestion":{
+      "text": "If yes, it may be...",
+      "options": [
+        {
+          "id": "1",
+          "text": "PULMONARY",
+          "feedback": "",
+          "correct": true
+        },
+        {
+          "id": "2",
+          "text": "EXTRA-PULMONARY",
+          "feedback": "",
+          "correct": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,84 @@
+ /* ===============================
+      desktop media screen 
+  ============================================== */
+  @media only screen and (max-width: 1560px) {
+    .about-nutri-wrp{width: 227px;height: 227px;}
+  }
+
+  @media only screen and (max-width: 1396px) {
+    .thanks-you-page{height:auto;padding:150px 0;}
+  }
+  
+  @media only screen and (max-width: 1280px) {
+    
+  }
+  
+  @media only screen and (max-width: 1150px) {
+   .contact .contact-info{padding:50px 31px}
+    
+  }
+  
+  @media only screen and (max-width:1024px) {
+    header .header-btn a{font-size: 11px;padding:4.5px 20px 4.5px 20px}
+    header .header-btn a.btn-secondary{padding:6.5px 30px 6.5px 30px}
+    header .header-btn{max-width: 289px;}
+    header nav {width: calc(100% - 306px);}
+    header .header-btn.profile-wrp a{font-size: 13px;padding: 10px 15px;} 
+    
+    
+  }
+  @media only screen and (max-width:980px) {
+    .banner::before{content:'';position: absolute;width:100%;height:100%;top: 0;left:0;background-color:rgba(255, 255, 255, 0.63)}
+    .banner .banner-wrp{float: left;max-width: 100%;}
+    .home-about .about-wrp{width:calc(100% / 1 - 0px)}
+    .home-about .container{flex-direction: column;}
+    .home-about .about-wrp:first-child,
+    .home-about .about-wrp:nth-child(2),
+    .home-about .about-wrp:last-child{max-width:100%;width:100%;text-align:center;}
+    .login-form .login-formwrp{padding:50px 30px 30px  30px}
+  }
+  
+
+  
+  @media only screen and (max-width:768px) {
+        header{padding:10px 0;} 
+        #nav-icon{display:block;}
+        header .main-logo:before{display: none;}
+        header .main-logo{position: relative;box-shadow: none;height: auto;max-width:58px}
+       .mobile-menu{overflow-y: scroll;display: flex; flex-direction: column;position: fixed;height: 100vh;max-width: 322px;right: 0;background: #fff;top: 0;box-shadow:-12px 1px 93px rgba(0, 0, 0, 0.48);z-index:+999999;right:-500px;transition:all 0.3s; }
+       .mobile-menu.active{right: 0;}
+       header nav{padding-left: 0;width:100%}
+       header .header-btn{flex-direction: column;background: #367455}
+       body header ul li{display: block;padding-right:0}
+       body header ul li a,
+       body header .header-btn a{padding:12px 20px;margin:0; font-size: 15px;display: block;background: transparent;border-radius: inherit;}
+       body header .header-btn a{border-bottom: 1px solid #70ba70;}
+       body header nav ul li a {color: #4f564a;border-bottom: 1px solid #edeeed;}
+       body header ul li:last-child a,
+       body header .header-btn a:last-child{border-bottom: none}
+       body .contact .container{flex-direction:column;}
+       body .contact .container > div{width:100%;}
+       footer .container{flex-direction:column; }
+       footer .footer-bottom{text-align:center;}
+       header .main-logo img{max-width:52px}
+       header .header-btn{order: -1;max-width:100%;}
+       header .profile-wrp .user-box{max-width:100%;height:auto;border-radius:0;padding:0;}
+       header .profile-wrp .user-box .user-wpr{justify-content: end;padding: 12px 20px;border-bottom:1px solid #edeeed;}
+       .user-box .user-arrow{display: none;}
+       .user-box .profile{display: block;position: relative;width: 100%;max-width: 100%;box-shadow: none;margin-top:0;}
+       body header .header-btn a{margin-right:0 !important;border:none;color: #fff;border-bottom:1px solid #276345}
+       .user-box .profile a:last-child{border-bottom:1px solid #edeeed;}
+       body header .user-box .profile a{color:#4f564a;padding: 12px 20px; }
+  }
+ 
+  @media only screen and (max-width:520px) {
+       body .form-coltwo{margin-right: 0px;width: calc(100% / 1 - 0px);}
+
+    
+  }
+
+
+  @media (max-width:380px) {
+   
+  }
+
