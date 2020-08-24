@@ -4,12 +4,12 @@
             <b-container fluid>
                 <b-row class="mb-2">
                     <b-col sm="6">
-                        <h1>Doctors</h1>
+                        <h1>Students</h1>
                     </b-col>
                     <b-col sm="6" style="margin-top: 8px;">
                         
                         <router-link to='/doctor/add' class="btn btn-info float-right">
-                            <i class="fa fa-plus"></i> Add New Doctors
+                            <i class="fa fa-plus"></i> Add New Students
                         </router-link>
                     </b-col>
                 </b-row>
@@ -73,7 +73,7 @@
                         
                         </th>
                         <th class="min-105">
-                            <span class="cursor-pointer d-flex justify-content-between align-items-center" @click="sort('are_you_doctor')">Doctor 
+                            <span class="cursor-pointer d-flex justify-content-between align-items-center" @click="sort('are_you_doctor')">Student 
                         <i class="fa fa-sort"></i></span>
                         
                         </th>

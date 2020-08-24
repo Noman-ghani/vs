@@ -30,7 +30,7 @@
                 <thead>
                     <tr>
                         <th>
-                            <span class="cursor-pointer d-flex justify-content-between align-items-center" @click="sort('doctor')">Docter Name 
+                            <span class="cursor-pointer d-flex justify-content-between align-items-center" @click="sort('doctor')">Student Name 
                                 <i class="fa fa-sort "></i>
                             </span>
                         </th>

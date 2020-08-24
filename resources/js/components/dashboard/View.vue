@@ -54,7 +54,7 @@
                     <LineChart  title="Total Registered doctors" :label="'Total Registered'" :data="lineData" v-if="showChart"/>
                 </div>
                 <div class="col-sm-6">
-                    <AreaChart :labels="['Total Register','Doctors','Non Doctors']" title="Total Records" :dataset="areadataset" v-if="showChart"/> 
+                    <AreaChart :labels="['Total Register','Students','Non Students']" title="Total Records" :dataset="areadataset" v-if="showChart"/> 
                 </div> -->
             </div>
                
@@ -97,8 +97,8 @@ export default {
                 post:{
                     totalRegister: 0,
                     attemptPretest: 0,
-                    isDoctor: 0,
-                    nonDoctor: 0,
+                    isStudent: 0,
+                    nonStudent: 0,
                 },
                 card:[]
             }
@@ -146,14 +146,14 @@ export default {
                             borderWidth:2
                         },
                         {
-                            label: "Doctors",
+                            label: "Students",
                             data : is_doctor,
                             backgroundColor: this.$helpers.generator_random_rgba(0.5),
                             borderColor: this.$helpers.generator_random_rgba(),
                             borderWidth:2
                         },
                         {
-                            label: "Non Doctors",
+                            label: "Non Students",
                             data : non_doctor,
                             backgroundColor: this.$helpers.generator_random_rgba(0.5),
                             borderColor: this.$helpers.generator_random_rgba(),
@@ -192,14 +192,14 @@ export default {
                     {
                         icon: 'fa-user-md',
                         iconbg: 'bg-xing',
-                        leadTitle: this.post.isDoctor,
-                        leadText: 'Register as Doctors',
+                        leadTitle: this.post.isStudent,
+                        leadText: 'Register as Students',
                     },
                     {
                         icon: 'fa-user-times',
                         iconbg: 'bg-youtube',
-                        leadTitle: this.post.nonDoctor,
-                        leadText: 'Register as Non-Doctors',
+                        leadTitle: this.post.nonStudent,
+                        leadText: 'Register as Non-Students',
                     },
                 ]
                 });

@@ -29,7 +29,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <a href="javascript:;" class="brand-link text-center">
                 <span class="brand-small-text font-weight-light"><b-img src="/assets/images/main-logo.png" fluid alt="Responsive image"></b-img></span>
-                <span class="brand-text font-weight-light"><b-img src="/assets/images/main-logo.png" fluid alt="Responsive image" style="max-width:80px"></b-img></span>
+                <span class="brand-text font-weight-light"><b-img src="/assets/images/main-logo.png" fluid alt="Responsive image" style="max-width:200px"></b-img></span>
             </a>
             <div class="sidebar">
                 <nav class="">

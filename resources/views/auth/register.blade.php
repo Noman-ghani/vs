@@ -12,7 +12,7 @@
                 <h3 class="padding-30bottom textclr-wit ">Register for a Tuberculosis Course</h3>
                 <div class="width100">
                     <div class="form-coltwo radio-col flex flex-justify-between flex-items-center chnage-div">
-                        <label>Are You A Doctor? <span class="strik">*</span></label>
+                        <label>Are You A Student? <span class="strik">*</span></label>
                         <div class="radio-wrp full-width flex ">
                             <div class="radio">
                                 <input name="are_you_doctor" id="are_you_doctor_yes" type="radio" value="1" checked="checked">

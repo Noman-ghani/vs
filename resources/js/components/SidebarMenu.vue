@@ -9,7 +9,7 @@
         <li class="nav-item">
             <router-link to='/doctors' :class="'nav-link ' + ((this.$route.name == 'doctor'||this.$route.name == 'doctor_add'||this.$route.name == 'doctor_edit') ? 'active' : '')">
                 <i class="nav-icon fa fa-user-md"></i>
-                <p>Doctors</p>
+                <p>Students</p>
             </router-link>
         </li>
         <li class="nav-item">

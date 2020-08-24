@@ -1,0 +1,15 @@
+/node_modules
+/storage
+/vendor
+.env
+composer.lock
+package-lock.json
+public/js/app.js
+public/js/theme.js
+public/css/app.css
+public/*.js
+.editorconfig
+.gitattributes
+.vscode
+.DS_Store
+/public/images

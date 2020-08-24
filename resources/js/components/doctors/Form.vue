@@ -4,8 +4,8 @@
             <b-container fluid>
                 <b-row class="mb-2">
                     <b-col sm="6">
-                        <h1 v-if="this.$route.params.id">Edit Doctor</h1>
-                        <h1 v-else>Add Doctor</h1>
+                        <h1 v-if="this.$route.params.id">Edit Student</h1>
+                        <h1 v-else>Add Student</h1>
                     </b-col>
                     <b-col class="col-sm-6">
                         <router-link to="/doctors" v-if="this.$route.params.id" class="btn btn-success float-right">Go Back</router-link>
@@ -14,17 +14,17 @@
             </b-container>
         </section>
         <section class="content">
-            <b-form v-on:submit.prevent="addDoctor">
+            <b-form v-on:submit.prevent="addStudent">
                 <div class="card">
                     <div class="card-body">
                     <div class="row">
                 <b-form-group
-                label="Are You A Doctor: *"
+                label="Are You A Student: *"
                 label-for="are_you_doctor"
                 class="col-sm-12">
                 <div class="col-sm-12 row">
-                        <b-form-radio v-model="post.are_you_doctor" @change="isDoctor(true)" name="are_you_doctor" class="col-sm-1" value="1">Yes</b-form-radio>
-                        <b-form-radio v-model="post.are_you_doctor" @change="isDoctor(false)" name="are_you_doctor" class="col-sm-1" value="0">No</b-form-radio>
+                        <b-form-radio v-model="post.are_you_doctor" @change="isStudent(true)" name="are_you_doctor" class="col-sm-1" value="1">Yes</b-form-radio>
+                        <b-form-radio v-model="post.are_you_doctor" @change="isStudent(false)" name="are_you_doctor" class="col-sm-1" value="0">No</b-form-radio>
                 </div>
                 </b-form-group>
             <b-form-group
@@ -477,7 +477,7 @@
                     this.half_col = "col-sm-12";
                 }
             },
-            addDoctor: function (div) {
+            addStudent: function (div) {
                let loader = this.$loading.show({
 
                });
@@ -519,9 +519,9 @@
                     this.error = '';
                     loader.hide();
                     if(this.$route.params.id){
-                     this.$root.$emit('alertify', {type: 'success', message: 'Doctor updated Successfully'});
+                     this.$root.$emit('alertify', {type: 'success', message: 'Student updated Successfully'});
                     }else{
-                        this.$root.$emit('alertify', {type: 'success', message: 'Doctor added Successfully'});
+                        this.$root.$emit('alertify', {type: 'success', message: 'Student added Successfully'});
                     }
                     this.$router.push({ name: "doctor" });
                 })
@@ -557,7 +557,7 @@
                 this.post.password_confirmation =  ''
 
             },
-            isDoctor: function ($status) {
+            isStudent: function ($status) {
                 console.log(this.post.firstname);
                 
                 if(this.post.firstname !=  '' || this.post.lastname !=  '' || this.post.email !=  '' || this.post.mobile_no !=  '' || this.post.alternate_contact_no !=  '' || this.post.province !=  '' || this.post.district !=  '' || this.post.basic_qualification !=  '' || this.post.other_qualification !=  '' || this.post.workplace_type !=  '' || this.post.address_government_hospital !=  '' || this.post.address_private_hospital !=  '' || this.post.work_experience !=  '' || this.post.cnic !=  '' || this.post.pmdc_registration_number !=  '' || this.post.password !=  '' || this.post.password_confirmation !=  ''){
