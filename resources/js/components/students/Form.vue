@@ -8,7 +8,7 @@
                         <h1 v-else>Add Student</h1>
                     </b-col>
                     <b-col class="col-sm-6">
-                        <router-link to="/doctors" v-if="this.$route.params.id" class="btn btn-success float-right">Go Back</router-link>
+                        <router-link to="/students" v-if="this.$route.params.id" class="btn btn-success float-right">Go Back</router-link>
                     </b-col>
                 </b-row>
             </b-container>
@@ -18,15 +18,6 @@
                 <div class="card">
                     <div class="card-body">
                     <div class="row">
-                <b-form-group
-                label="Are You A Student: *"
-                label-for="are_you_doctor"
-                class="col-sm-12">
-                <div class="col-sm-12 row">
-                        <b-form-radio v-model="post.are_you_doctor" @change="isStudent(true)" name="are_you_doctor" class="col-sm-1" value="1">Yes</b-form-radio>
-                        <b-form-radio v-model="post.are_you_doctor" @change="isStudent(false)" name="are_you_doctor" class="col-sm-1" value="0">No</b-form-radio>
-                </div>
-                </b-form-group>
             <b-form-group
                 id="fname-group"
                 label="First Name: *"
@@ -167,10 +158,7 @@
                 v-model="post.basic_qualification"
                 @change="onQualification"
                 multiple>
-                <b-form-select-option v-show="post.are_you_doctor === '0'" v-for="(data) in non_dr_qualification" :key="Math.random()*100" :value="data.value">
-                        {{ data.title }}
-                </b-form-select-option>
-                <b-form-select-option v-show="post.are_you_doctor === '1'" v-for="(data) in dr_qualification" :key="Math.random()*100" :value="data.value">
+                <b-form-select-option v-for="(data,idx) in qualification" :key="idx" :value="data.value">
                         {{ data.title }}
                 </b-form-select-option>
                 </b-form-select>
@@ -190,10 +178,25 @@
                 ></b-form-input>
                 <span v-if="error.other_qualification" class="text-danger direct-chat-name float-left mt-1 w-100">{{ error.other_qualification[0]}}</span>
             </b-form-group>
-            <div class="input-group" v-show="post.are_you_doctor === '1'">
+              <b-form-group
+                    id="work_experience_group"
+                    label="Experience Of Your Work: *"
+                    label-for="work_experience"
+                    class="col-sm-12">
+                    <b-form-select
+                    id="work_experience"
+                    v-model="post.work_experience">
+                    <b-form-select-option value="" >Select Experience</b-form-select-option>
+                        <b-form-select-option v-for="(data,idx) in work_exp_options" :key="idx" :value="data.value">
+                            {{ data.title }}
+                        </b-form-select-option>                    
+                    </b-form-select>
+                    <span v-if="error.work_experience" class="text-danger direct-chat-name float-left mt-1 w-100">{{ error.work_experience[0]}}</span>
+                </b-form-group>
+            <div class="input-group" v-show="post.std_active === '1'">
                 <b-form-group
                     id="workplace_group"
-                    label="Workplace type: *"
+                    label="Are you currently working: *"
                     label-for="workplace"
                     class="col-sm-6">
                     <b-form-select
@@ -206,67 +209,23 @@
                     </b-form-select>
                     <span v-if="error.workplace_type" class="text-danger direct-chat-name float-left mt-1 w-100">{{ error.workplace_type[0]}}</span>
                 </b-form-group>
-                <b-form-group
-                    id="ghospital_address_group"
-                    label="Address Of Government Hospital: *"
-                    label-for="ghospital_address"
-                    v-show="post.workplace_type === 'government'"
-                    class="col-sm-6">
-                    <b-form-input
-                    id="ghospital_address"
-                    v-model="post.address_government_hospital"
-                    type="text"
-                    placeholder="Street addres, city, & etc"
-                    ></b-form-input>
-                    <span v-if="error.address_government_hospital" class="text-danger direct-chat-name float-left mt-1 w-100">{{ error.address_government_hospital[0]}}</span>
-                </b-form-group>
+                
                 <b-form-group
                     id="phospital_address_group"
-                    label="Address Private Hospital/Clinic: *"
+                    label="Address Workplace: *"
                     label-for="phospital_address"
-                    v-show="post.workplace_type === 'private'"
                     class="col-sm-6">
                     <b-form-input
                     id="phospital_address"
-                    v-model="post.address_private_hospital"
+                    v-model="post.address_personal_workplace"
                     type="text"
                     placeholder="Street addres, city, & etc"
                     ></b-form-input>
-                    <span v-if="error.address_private_hospital" class="text-danger direct-chat-name float-left mt-1 w-100">{{ error.address_private_hospital[0]}}</span>
-                </b-form-group>
-                
-                <b-form-group
-                    id="work_experience_group"
-                    label="Experience Of Your Work: *"
-                    label-for="work_experience"
-                    class="col-sm-6">
-                    <b-form-select
-                    id="work_experience"
-                    v-model="post.work_experience">
-                    <b-form-select-option value="" >Select Experience</b-form-select-option>
-                        <b-form-select-option v-for="(data,idx) in work_exp_options" :key="idx" :value="data.value">
-                            {{ data.title }}
-                        </b-form-select-option>                    
-                    </b-form-select>
-                    <span v-if="error.work_experience" class="text-danger direct-chat-name float-left mt-1 w-100">{{ error.work_experience[0]}}</span>
-                </b-form-group>
-                <b-form-group
-                    id="pmdc_registration_group"
-                    label="PMDC Registration Card No:"
-                    label-for="pmdc_registration"
-                    description="PMDC number will be required at the time of certificate"
-                    class="col-sm-6">
-                    <b-form-input
-                    id="pmdc_registration"
-                    v-model="post.pmdc_registration_number"
-                    type="text"
-                    placeholder="Enter PMDC registration card no eg (1234-P)"
-                    ></b-form-input>
-                    <span v-if="error.pmdc_registration_number" class="text-danger direct-chat-name float-left mt-1 w-100">{{ error.pmdc_registration_number[0]}}</span>
+                    <span v-if="error.address_personal_workplace" class="text-danger direct-chat-name float-left mt-1 w-100">{{ error.address_personal_workplace[0]}}</span>
                 </b-form-group>
         
                 <div class="form-group input-group col-sm-6">
-                            <label class="w-100">Upload PMDC Card</label>
+                            <label class="w-100">Upload Image</label>
                         <div class="custom-file">
                             <span class="custom-file-label" for="inputFileUpload">{{ chooseFile }}</span>
                             <input type="file" 
@@ -276,7 +235,6 @@
                         </div>
                         <span class="w-100 small">(jpeg,jpg,png) max-size = 1000kb</span>
                     <span v-if="error.image" class="text-danger w-100 direct-chat-name">{{ error.image[0]}}</span>
-
                 </div>
             </div>
             <b-form-group
@@ -323,7 +281,7 @@
             return {
                 post:{
                     role_id: 2,
-                    are_you_doctor: "1",
+                    std_active: "1",
                     firstname: '',
                     lastname: '',
                     email: '',
@@ -335,7 +293,7 @@
                     other_qualification: '',
                     workplace_type: '',
                     address_government_hospital: '',
-                    address_private_hospital: '',
+                    address_personal_workplace: '',
                     work_experience: '',
                     cnic: '',
                     pmdc_registration_number: '',
@@ -347,12 +305,28 @@
                 half_col: 'col-sm-12',
                 province_options: [],
                 district_options: [],
-                workplace_options: [{
-                        value: 'government',
-                        title: 'Government Hospital',
+                qualification: [{
+                        value: 'matric',
+                        title: 'Matric',
                     },{
-                        value: 'private',
-                        title: 'Private Hospital/Clinic',
+                        value: 'intermediate',
+                        title: 'Intermediate',
+                    },
+                    {
+                        value: 'graduation',
+                        title: 'Graduation',
+                    },
+                    {
+                        value: 'other',
+                        title: 'Others',
+                    }
+                ],
+                workplace_options: [{
+                        value: 'yes',
+                        title: 'Yes i am',
+                    },{
+                        value: 'no',
+                        title: 'Not yet',
                     }
                 ],
                 work_exp_options: [{
@@ -365,34 +339,6 @@
                         value: '10+_years',
                         title: '10+ Years',
                     }
-                ],
-                non_dr_qualification: [{
-                        value: 'graduation',
-                        title: 'Graduation',
-                    },{
-                        value: 'master_degree',
-                        title: 'Master Degree',
-                    },{
-                        value: 'other',
-                        title: 'Other (specify)',
-                    }
-                ],
-                dr_qualification: [{
-                        value: 'MBBS',
-                        title: 'MBBS',
-                    },{
-                        value: 'post_graduation',
-                        title: 'Post Graduation',
-                    },{
-                        value: 'master_degree',
-                        title: 'Master Degree',
-                    },{
-                        value: 'phd',
-                        title: 'PhD',
-                    },{
-                        value: 'other',
-                        title: 'Other (specify)',
-                    },
                 ],
                 chooseFile: ""
             }
@@ -413,15 +359,15 @@
         methods: {
             fetchDataByID: function() {
                  let loader = this.$loading.show();
-               axios.get('/doctor/edit/'+this.$route.params.id)
+               axios.get('/student/edit/'+this.$route.params.id)
                 .then(response => {
                     loader.hide();
                     console.log(response.data)
                     this.post = response.data;
-                    if(this.post.are_you_doctor == 1){
-                        this.post.are_you_doctor = "1";
+                    if(this.post.std_active == 1){
+                        this.post.std_active = "1";
                     }else{
-                        this.post.are_you_doctor = "0";
+                        this.post.std_active = "0";
                     }
                     console.log(response.data);
                     
@@ -433,11 +379,8 @@
                     this.post.district = response.data.district;
                     this.post.workplace_type = response.data.workplace_type;
                     this.post.work_experience = response.data.work_experience;
-                    if(response.data.address_government_hospital == "null"){
-                        this.post.address_government_hospital = null;
-                    }
-                    if(response.data.address_private_hospital == "null"){
-                        this.post.address_private_hospital = null;
+                    if(response.data.address_personal_workplace == "null"){
+                        this.post.address_personal_workplace = null;
                     }
                     this.post.password = '';
                     this.post.password_confirmation = '';
@@ -483,9 +426,9 @@
                });
                 console.log(this.post.basic_qualification);
                 
-               var url = '/doctor/add'
+               var url = '/student/add'
                     if(this.$route.params.id){
-                        url = '/doctor/edit/'+this.$route.params.id
+                        url = '/student/edit/'+this.$route.params.id
                     }
                 const formData = new FormData();
                 if(this.$route.params.id){
@@ -493,7 +436,7 @@
                 }
                 formData.append('image', this.image);
                 formData.append('role_id', this.post.role_id);
-                formData.append('are_you_doctor', this.post.are_you_doctor);
+                formData.append('std_active', this.post.std_active);
                 formData.append('firstname', this.post.firstname);
                 formData.append('lastname', this.post.lastname);
                 formData.append('email', this.post.email);
@@ -505,8 +448,7 @@
                 formData.append('basic_qualification', this.post.basic_qualification);
                 formData.append('other_qualification', this.post.other_qualification);
                 formData.append('workplace_type', this.post.workplace_type);
-                formData.append('address_government_hospital', this.post.address_government_hospital);
-                formData.append('address_private_hospital', this.post.address_private_hospital);
+                formData.append('address_personal_workplace', this.post.address_personal_workplace);
                 formData.append('work_experience', this.post.work_experience);
                 formData.append('cnic', this.post.cnic);
                 formData.append('pmdc_registration_number', this.post.pmdc_registration_number);
@@ -523,7 +465,7 @@
                     }else{
                         this.$root.$emit('alertify', {type: 'success', message: 'Student added Successfully'});
                     }
-                    this.$router.push({ name: "doctor" });
+                    this.$router.push({ name: "student" });
                 })
                 .catch((err) => {
                     this.error = err.response.data.errors
@@ -549,7 +491,7 @@
                 this.post.other_qualification =  '';
                 this.post.workplace_type =  '';
                 this.post.address_government_hospital =  '';
-                this.post.address_private_hospital =  '';
+                this.post.address_personal_workplace =  '';
                 this.post.work_experience =  '';
                 this.post.cnic =  '';
                 this.post.pmdc_registration_number =  '';
@@ -560,7 +502,7 @@
             isStudent: function ($status) {
                 console.log(this.post.firstname);
                 
-                if(this.post.firstname !=  '' || this.post.lastname !=  '' || this.post.email !=  '' || this.post.mobile_no !=  '' || this.post.alternate_contact_no !=  '' || this.post.province !=  '' || this.post.district !=  '' || this.post.basic_qualification !=  '' || this.post.other_qualification !=  '' || this.post.workplace_type !=  '' || this.post.address_government_hospital !=  '' || this.post.address_private_hospital !=  '' || this.post.work_experience !=  '' || this.post.cnic !=  '' || this.post.pmdc_registration_number !=  '' || this.post.password !=  '' || this.post.password_confirmation !=  ''){
+                if(this.post.firstname !=  '' || this.post.lastname !=  '' || this.post.email !=  '' || this.post.mobile_no !=  '' || this.post.alternate_contact_no !=  '' || this.post.province !=  '' || this.post.district !=  '' || this.post.basic_qualification !=  '' || this.post.other_qualification !=  '' || this.post.workplace_type !=  '' || this.post.address_government_hospital !=  '' || this.post.address_personal_workplace !=  '' || this.post.work_experience !=  '' || this.post.cnic !=  '' || this.post.pmdc_registration_number !=  '' || this.post.password !=  '' || this.post.password_confirmation !=  ''){
                 this.$dialog.confirm('Are you sure want to change status?', {
                     loader: true,
                     okText: 'Change',
@@ -571,11 +513,11 @@
                 })
                 .catch(() => {
                     if($status){
-                        this.post.are_you_doctor = "0";
+                        this.post.std_active = "0";
                     }else{
-                        this.post.are_you_doctor = "1";
+                        this.post.std_active = "1";
                     }
-                   console.log('Clicked on cancel '+this.post.are_you_doctor);
+                   console.log('Clicked on cancel '+this.post.std_active);
                    
                 });
                 }

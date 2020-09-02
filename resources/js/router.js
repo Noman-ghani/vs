@@ -44,24 +44,7 @@ const routes = [
     //         layout: AuthLayout
     //     }
     // },
-    {
-        name: 'modules',
-        path: '/modules',
-        component: () =>
-            import ('./components/modules/List.vue'),
-        meta: {
-            layout: ThemeLayout,
-        }
-    },
-    {
-        name: 'module1',
-        path: '/module/1',
-        component: () =>
-            import ('./components/modules/Module1.vue'),
-        meta: {
-            layout: ThemeLayout,
-        }
-    },
+    
     {
         name: 'dashboard',
         path: '/dashboard',
@@ -127,55 +110,28 @@ const routes = [
         }
     },
     {
-        name: 'doctor',
-        path: '/doctors',
+        name: 'student',
+        path: '/students',
         component: () =>
-            import ('./components/doctors/List.vue'),
+            import ('./components/students/List.vue'),
         meta: {
             layout: ThemeLayout,
         }
     },
     {
-        name: 'doctor_add',
-        path: '/doctor/add',
+        name: 'student_add',
+        path: '/student/add',
         component: () =>
-            import ('./components/doctors/Form.vue'),
+            import ('./components/students/Form.vue'),
         meta: {
             layout: ThemeLayout,
         }
     },
     {
-        name: 'doctor_edit',
-        path: '/doctor/edit/:id',
+        name: 'student_edit',
+        path: '/student/edit/:id',
         component: () =>
-            import ('./components/doctors/Form.vue'),
-        meta: {
-            layout: ThemeLayout,
-        }
-    },
-    {
-        name: 'pre_result',
-        path: '/pre-result',
-        component: () =>
-            import ('./components/result/pretest/List.vue'),
-        meta: {
-            layout: ThemeLayout,
-        }
-    },
-    {
-        name: 'pre_result_view',
-        path: '/pre-result/view/:id',
-        component: () =>
-            import ('./components/result/pretest/View.vue'),
-        meta: {
-            layout: ThemeLayout,
-        }
-    },
-    {
-        name: 'post_result',
-        path: '/post-result',
-        component: () =>
-            import ('./components/result/posttest/List.vue'),
+            import ('./components/students/Form.vue'),
         meta: {
             layout: ThemeLayout,
         }
@@ -185,15 +141,6 @@ const routes = [
         path: '/settings',
         component: () =>
             import ('./components/Settings.vue'),
-        meta: {
-            layout: ThemeLayout,
-        }
-    },
-    {
-        name: 'post_result_view',
-        path: '/post-result/view/:id',
-        component: () =>
-            import ('./components/result/posttest/View.vue'),
         meta: {
             layout: ThemeLayout,
         }

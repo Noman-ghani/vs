@@ -40,14 +40,14 @@
             <div class='border-bottom'></div>
             <div class='loader' style="display: none"><img src='{{ asset('assets/images/pretest/loader.svg') }}'></div>
         </div>
-        <span class="doctor-face"><img src="/assets/images/pretest/doctor-face.svg" alt="doctor-face">
-            <span class="doctor-feedback"></span>
+        <span class="student-face"><img src="/assets/images/pretest/student-face.svg" alt="student-face">
+            <span class="student-feedback"></span>
         </span>
-        <span class="man-doctor">
-            <object data="{{ asset('assets/images/pretest/man-doctor.svg') }}" type="image/svg+xml"></object>
+        <span class="man-student">
+            <object data="{{ asset('assets/images/pretest/man-student.svg') }}" type="image/svg+xml"></object>
         </span>
-        <span class="doctor_sitting" style="display: none">
-            <img src="{{ asset('assets/images/pretest/doctor_sitting.svg') }}" alt="doctor_sitting">
+        <span class="student_sitting" style="display: none">
+            <img src="{{ asset('assets/images/pretest/student_sitting.svg') }}" alt="student_sitting">
         </span>
         <span class="nursery">
             <img src="{{ asset('assets/images/pretest/nursery.svg') }}" alt="nursery">
@@ -55,8 +55,8 @@
         <span class="door ">
             <img src="{{ asset('assets/images/pretest/door.svg') }}" alt="door">
         </span>
-        <span class="lady-doctor">
-            <object data="{{ asset('assets/images/pretest/lady-doctor.svg') }}" type="image/svg+xml"></object>
+        <span class="lady-student">
+            <object data="{{ asset('assets/images/pretest/lady-student.svg') }}" type="image/svg+xml"></object>
         </span>
         <span class="logo">
             <img src="{{ asset('assets/images/pretest/logo.png') }}" alt="logo">
@@ -66,7 +66,7 @@
         </span>
 
         <span class="window"><img src="{{ asset('assets/images/pretest/window.svg') }}" alt="window"></span>
-        <span class="set-lady-doctor"><img src="{{ asset('assets/images/pretest/set-lady-doctor.svg') }}" alt="set-lady-doctor"></span>
+        <span class="set-lady-student"><img src="{{ asset('assets/images/pretest/set-lady-student.svg') }}" alt="set-lady-student"></span>
         <span class="lady-patient"><img src="{{ asset('assets/images/pretest/lady-patient.svg') }}" alt="lady-patient"></span>
         <span class="earth"></span>
     </div>

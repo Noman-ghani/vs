@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\Models\DoctorsTimespentLogs;
+use App\Models\StudentsTimespentLogs;
 use App\Models\Settings;
 use Illuminate\Support\Carbon;
 use App\Http\Controllers\MailController;
@@ -41,10 +41,10 @@ class moduleTime extends Command
      */
     public function handle()
     {   
-        $results = DoctorsTimespentLogs::join('doctors','doctors.user_id','=','doctors_timespent_logs.user_id')
-        ->where('doctors.is_deleted',0)
-        ->join('users','doctors.user_id','=','users.id')
-        ->where('doctors_timespent_logs.ended_at','!=',null)
+        $results = StudentsTimespentLogs::join('students','students.user_id','=','students_timespent_logs.user_id')
+        ->where('students.is_deleted',0)
+        ->join('users','students.user_id','=','users.id')
+        ->where('students_timespent_logs.ended_at','!=',null)
         ->get();
         dd($results);
         foreach($results as $res){

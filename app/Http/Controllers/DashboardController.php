@@ -12,27 +12,26 @@ class DashboardController extends Controller
     public function getDashboadData(Request $request)
     {
         
-        $results = \App\Models\Doctors::select(DB::raw("(COUNT(id)) as totalRegister"),
-            DB::raw("sum(case when has_taken_pretest = 1 then 1 else 0 end) attemptPretest"),
-            DB::raw("sum(case when are_you_doctor = 1 then 1 else 0 end) isDoctor"),
-            DB::raw("sum(case when are_you_doctor = 0 then 1 else 0 end) nonDoctor")
+        $results = \App\Models\Students::select(DB::raw("(COUNT(id)) as totalRegister"),
+            DB::raw("sum(case when std_active = 1 then 1 else 0 end) isStudent"),
+            DB::raw("sum(case when std_active = 0 then 1 else 0 end) nonStudent")
 
         );
         
-        $bardata = \App\Models\Doctors::select(
+        $bardata = \App\Models\Students::select(
             DB::raw("(COUNT(id)) as registered"),
-            DB::raw("sum(case when are_you_doctor = 1 then 1 else 0 end) is_doctor"),
-            DB::raw("sum(case when are_you_doctor = 0 then 1 else 0 end) non_doctor"),
+            DB::raw("sum(case when std_active = 1 then 1 else 0 end) is_student"),
+            DB::raw("sum(case when std_active = 0 then 1 else 0 end) non_student"),
             DB::raw("sum(case when province = 1 then 1 else 0 end) from_province"),
             DB::raw("DATE_FORMAT(created_at, '%b') as monthname"),
             DB::raw("DATE_FORMAT(created_at, '%y %m') as monthId")
         )->orderBy('monthId','asc');
 
-        $pieData = \App\Models\Doctors::select(
-            DB::raw("(COUNT(doctors.id)) as registered"),
+        $pieData = \App\Models\Students::select(
+            DB::raw("(COUNT(students.id)) as registered"),
             DB::raw("states.title")
         )
-        ->join('states','doctors.province','=','states.id')->where('is_deleted',0);
+        ->join('states','students.province','=','states.id')->where('is_deleted',0);
         
         if($request->daterange['startDate'] && $request->daterange['endDate']){
             

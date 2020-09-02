@@ -16,7 +16,7 @@ class Students extends Migration
         if (!Schema::hasTable('Students')) {
             Schema::create('Students', function (Blueprint $table) {
                 $table->id();
-                $table->boolean('fees_payed');
+                $table->boolean('std_active');
                 $table->unsignedInteger('user_id');
                 $table->bigInteger('mobile_no');
                 $table->bigInteger('alternate_contact_no')->nullable();
@@ -28,8 +28,6 @@ class Students extends Migration
                 $table->string('work_experience')->nullable();
                 $table->string('workplace_type')->nullable();
                 $table->text('address_personal_workplace')->nullable();
-                $table->timestamp('pretest_started_at')->nullable();
-                $table->timestamp('pretest_ended_at')->nullable();
                 $table->integer('is_deleted')->default(0);
                 $table->timestamp('deleted_at')->nullable();
                 $table->timestamps();

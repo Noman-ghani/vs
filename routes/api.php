@@ -24,7 +24,7 @@ Route::get('/reset_new_password/{token}', '\App\Http\Controllers\Auth\ResetPassw
 Route::post('reset_new_password', '\App\Http\Controllers\Auth\ResetPasswordController@reset')->name('password.reset');
 
 Route::group(['middleware' => 'frontend'], function () {
-    Route::post('/doctor/register', '\App\Http\Controllers\DoctorsController@store');
+    Route::post('/student/register', '\App\Http\Controllers\StudentsController@store');
 });
 
 
@@ -63,11 +63,11 @@ Route::group(['middleware' => 'auth:api'], function () {
     
     Route::get('/allowed_permissions/{id}', '\App\Http\Controllers\AllowPermissionsController@get_by_id')->where('id', '[0-9]+');
     
-    Route::get('/doctors', '\App\Http\Controllers\DoctorsController@browse');
-    Route::get('/doctor/edit/{id}', '\App\Http\Controllers\DoctorsController@get_by_id')->where('id', '[0-9]+');
-    Route::post('/doctor/add', '\App\Http\Controllers\DoctorsController@store');
-    Route::post('/doctor/edit/{id}', '\App\Http\Controllers\DoctorsController@update_by_id')->where('id', '[0-9]+');
-    Route::post('/doctor/delete/{id}', '\App\Http\Controllers\DoctorsController@soft_delete_by_id')->where('id', '[0-9]+');
+    Route::get('/students', '\App\Http\Controllers\StudentsController@browse');
+    Route::get('/student/edit/{id}', '\App\Http\Controllers\StudentsController@get_by_id')->where('id', '[0-9]+');
+    Route::post('/student/add', '\App\Http\Controllers\StudentsController@store');
+    Route::post('/student/edit/{id}', '\App\Http\Controllers\StudentsController@update_by_id')->where('id', '[0-9]+');
+    Route::post('/student/delete/{id}', '\App\Http\Controllers\StudentsController@soft_delete_by_id')->where('id', '[0-9]+');
     
     Route::get('/pre-result', '\App\Http\Controllers\ResultController@browse');
     Route::get('/pre-result/view/{id}', '\App\Http\Controllers\ResultController@get_by_id')->where('id', '[0-9]+');
@@ -86,5 +86,5 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::post('deleteFile', 'APIController@deleteFile');
     
 
-    // Route::post('uploadImage','DoctorsController@store');
+    // Route::post('uploadImage','StudentsController@store');
 });

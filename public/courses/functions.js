@@ -97,7 +97,7 @@ function goTo(moduleID, sectionID) {
     if (moduleID == 1) {
         module1_UI(section, sectionID);
     }
-    toggleDoctor(section);
+    toggleStudent(section);
 }
 
 function module1_UI(section, sectionID) {
@@ -159,7 +159,7 @@ function module1_UI(section, sectionID) {
             $('.nursery').fadeOut().delay(2000).fadeIn();
 
             $('.window').animate({ 'left': '-4.7vw' }, 1000);
-            $('.set-lady-doctor').delay(1000).animate({ 'left': '-7vw' }, 1000);
+            $('.set-lady-student').delay(1000).animate({ 'left': '-7vw' }, 1000);
             $('.lady-patient').animate({ 'right': '40%' }, 1000);
             $('.earth').animate({ 'height': '8vw' }, 1000);
 
@@ -170,7 +170,7 @@ function module1_UI(section, sectionID) {
             $('.door').animate({ 'bottom': '-50vw' }, 1000);
 
             $('.window').animate({ 'left': '-20vw' }, 1000);
-            $('.set-lady-doctor').animate({ 'left': '-45vw' }, 1000);
+            $('.set-lady-student').animate({ 'left': '-45vw' }, 1000);
             $('.lady-patient').animate({ 'right': '-15%' }, 1000);
             $('.earth').animate({ 'height': '0vw' });
             $('.nursery').fadeOut();

@@ -8,7 +8,7 @@
                     </b-col>
                     <b-col sm="6" style="margin-top: 8px;">
                         
-                        <router-link to='/doctor/add' class="btn btn-info float-right">
+                        <router-link to='/student/add' class="btn btn-info float-right">
                             <i class="fa fa-plus"></i> Add New Students
                         </router-link>
                     </b-col>
@@ -58,7 +58,7 @@
                         
                         </th>
                         <th class="min-180">
-                            <span class="cursor-pointer d-flex justify-content-between align-items-center" @click="sort('doctors.created_at')">Registration Date 
+                            <span class="cursor-pointer d-flex justify-content-between align-items-center" @click="sort('students.created_at')">Registration Date 
                         <i class="fa fa-sort"></i></span>
                         </th>
                         
@@ -67,13 +67,9 @@
                         <i class="fa fa-sort"></i></span>
                         
                         </th>
-                        <th class="min-110">
-                            <span class="cursor-pointer d-flex justify-content-between align-items-center" @click="sort('pmdc_registration_number')">PMDC No 
-                        <i class="fa fa-sort"></i></span>
-                        
-                        </th>
+    
                         <th class="min-105">
-                            <span class="cursor-pointer d-flex justify-content-between align-items-center" @click="sort('are_you_doctor')">Student 
+                            <span class="cursor-pointer d-flex justify-content-between align-items-center" @click="sort('std_active')">Active 
                         <i class="fa fa-sort"></i></span>
                         
                         </th>
@@ -138,18 +134,10 @@
                                     </b-form-input>
                             </b-form>
                         </td>
-                        <td>
-                            <b-form v-on:submit.prevent="browse" class="search-column">
-                                    <b-form-input 
-                                    v-model="search_data.pmdc_no" 
-                                    type="text"
-                                    placeholder="Search">
-                                    </b-form-input>
-                            </b-form>
-                        </td>
+                        
                         <td>
                                     <b-form-select 
-                                    v-model="search_data.is_doctor"
+                                    v-model="search_data.is_student"
                                     class="search_select_sort"
                                     @change="browse">
                                     <b-form-select-option value="">Select</b-form-select-option>
@@ -168,16 +156,10 @@
                         <td>{{ row.user.email }}</td>
                         <td class="text-center">{{ row.created_at | format_date }}</td>
                         <td class="text-center">{{ row.cnic }}</td>
+                        <td class="text-center" v-show="row.std_active === 0">No</td>
+                        <td class="text-center" v-show="row.std_active === 1">Yes</td>
                         <td class="text-center action-btns">
-                            <!-- <router-link :to=" row.pmdc_registration_number">
-                            </router-link> -->
-                            <b-link :href="'http://www.pmdc.org.pk/DesktopModules/pmdcDetails/PractDetail.aspx?RegistrationNo=' + row.pmdc_registration_number" target="_blank" class="btn btn-light">{{ row.pmdc_registration_number }}</b-link>
-                            
-                        </td>
-                        <td class="text-center" v-show="row.are_you_doctor === 0">No</td>
-                        <td class="text-center" v-show="row.are_you_doctor === 1">Yes</td>
-                        <td class="text-center action-btns">
-                        <router-link :to="'doctor/edit/' + row.id" class="btn btn-success">
+                        <router-link :to="'student/edit/' + row.id" class="btn btn-success">
                             <i class="fa fa-edit"></i>
                         </router-link>
                        
@@ -206,6 +188,7 @@
                 fullPage: false,
                 list_data: [],
                 show: false,
+
                 search_data: {
                     pagination:{},
                     sort:'',
@@ -215,8 +198,7 @@
                     email: '',
                     created_at: '',
                     cnic: '',
-                    pmdc_no: '',
-                    is_doctor: '',
+                    is_student: '',
                     sort_order: false,
                     page:'',
                     record: 10
@@ -250,7 +232,7 @@
                 if(this.$route.query.page){
                     this.search_data.page = this.$route.query.page;
                 }
-                axios.get('doctors?' + $.param(this.search_data))
+                axios.get('students?' + $.param(this.search_data))
                 .then(res => {
                     loader.hide();
                     this.list_data =  res.data.data.data;
@@ -268,7 +250,7 @@
                     okText: 'Delete',
                 })
                 .then((dialog) => {
-                    axios.post('doctor/delete/' + id)
+                    axios.post('student/delete/' + id)
                     .then(response => {
                         this.browse();
                         dialog.close();

@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Models\States;
 use \App\Models\Cities;
-use App\Models\Doctors;
-use App\Models\DoctorsTimespentLogs;
+use App\Models\Students;
+use App\Models\StudentsTimespentLogs;
 use App\Models\Mcqs;
 use App\Models\McqsAnswers;
 use App\Models\McqsAttempt;
@@ -35,10 +35,10 @@ class PageController extends FrontController
     public function lms()
     {
         $attempts = McqsAttempt::where('user_id', Auth::id())->select(['mcq_id'])->count();
-        $doctor = Doctors::whereUserId(Auth::id())->first();
+        $doctor = Students::whereUserId(Auth::id())->first();
         
         $this->data['user'] = Auth::user()->firstname . ' ' . Auth::user()->lastname;
-        $this->data['timespent'] = json_encode(DoctorsTimespentLogs::where('user_id', Auth::id()));
+        $this->data['timespent'] = json_encode(StudentsTimespentLogs::where('user_id', Auth::id()));
 
         if($doctor->has_taken_pretest){
             $this->data['module'] = $doctor->module_id ?? 1;

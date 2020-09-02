@@ -51,14 +51,14 @@ jQuery(document).ready(function($) {
         $('ul.profile').toggleClass('active-profile');
     });
 
-    $('input:radio[name=are_you_doctor]').change(function() {
+    $('input:radio[name=std_active]').change(function() {
         if (this.value == '1') {
-            $(".doctor").show();
-            $(".none-doctor").hide();
+            $(".student").show();
+            $(".none-student").hide();
 
         } else if (this.value == '0') {
-            $(".none-doctor").show();
-            $(".doctor").hide();
+            $(".none-student").show();
+            $(".student").hide();
         }
         resetForm();
     });
@@ -84,9 +84,9 @@ jQuery(document).ready(function($) {
         $('input[type=submit]').attr('disabled', true);
         let formID = $(this).attr('id');
         let formData = new FormData(this);
-        formData.append('are_you_doctor', $("input[name=are_you_doctor]:checked").val());
+        formData.append('std_active', $("input[name=std_active]:checked").val());
         formData.append('basic_qualification', $('[name="basic_qualification"]', this).val());
-        if (formID == 'doctor_form') {
+        if (formID == 'student_form') {
             formData.append('workplace_type', $('[name="workplace_type"]', this).val());
         }
         $.ajax({

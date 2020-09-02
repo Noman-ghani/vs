@@ -26,8 +26,8 @@ var previousNextBtn = "<div class='pervious' id='navBtn'><button class='btn next
 var nextBtn = "<button class='btn nextBtn'>NEXT</button>";
 
 // global svg
-var manDoctorSvg = 'assets/images/pretest/man-doctor.svg';
-var ladyDoctorSvg = 'assets/images/pretest/lady-doctor.svg';
+var manStudentSvg = 'assets/images/pretest/man-student.svg';
+var ladyStudentSvg = 'assets/images/pretest/lady-student.svg';
 
 function loadJson(dir, file) {
     dir = dir || null;
@@ -143,22 +143,22 @@ function toggleModuleContent(appendTo, isNext) {
     }, 1000);
 }
 
-function toggleDoctor(section, callback) {
-    if (section.doctor) {
-        if (section.doctor === "lady") {
-            // $('.lady-doctor object').attr('data', ladyDoctorSvg);
-            $('.lady-doctor').animate({ 'right': '3%' }, 1000);
-            $('.man-doctor').animate({ 'left': '-35vw' }, 1000);
+function toggleStudent(section, callback) {
+    if (section.student) {
+        if (section.student === "lady") {
+            // $('.lady-student object').attr('data', ladyStudentSvg);
+            $('.lady-student').animate({ 'right': '3%' }, 1000);
+            $('.man-student').animate({ 'left': '-35vw' }, 1000);
         }
 
-        if (section.doctor === "man") {
-            // $('.man-doctor object').attr('data', manDoctorSvg);
-            $('.man-doctor').animate({ 'left': '5vw' }, 1000);
-            $('.lady-doctor').animate({ 'right': '-40%' }, 1000);
+        if (section.student === "man") {
+            // $('.man-student object').attr('data', manStudentSvg);
+            $('.man-student').animate({ 'left': '5vw' }, 1000);
+            $('.lady-student').animate({ 'right': '-40%' }, 1000);
         }
     } else {
-        $('.lady-doctor').animate({ 'right': '-40%' }, 1000);
-        $('.man-doctor').animate({ 'left': '-35vw' }, 1000);
+        $('.lady-student').animate({ 'right': '-40%' }, 1000);
+        $('.man-student').animate({ 'left': '-35vw' }, 1000);
     }
 
     if (callback !== undefined) {
@@ -166,10 +166,10 @@ function toggleDoctor(section, callback) {
     }
 }
 
-function doctorLipsing(start) {
-    let doctor = parseInt($('.man-doctor').css('left')) > 1 ? 'man' : 'lady';
-    let mouthUp = document.getElementsByClassName(doctor + '-doctor')[0].children[0].getSVGDocument().getElementById(doctor + '-mouth-up');
-    let mouthDown = document.getElementsByClassName(doctor + '-doctor')[0].children[0].getSVGDocument().getElementById(doctor + '-mouth-down');
+function studentLipsing(start) {
+    let student = parseInt($('.man-student').css('left')) > 1 ? 'man' : 'lady';
+    let mouthUp = document.getElementsByClassName(student + '-student')[0].children[0].getSVGDocument().getElementById(student + '-mouth-up');
+    let mouthDown = document.getElementsByClassName(student + '-student')[0].children[0].getSVGDocument().getElementById(student + '-mouth-down');
     let upClass = mouthUp.classList[0];
     let downClass = mouthDown.classList[0];
     start = start || true;
@@ -178,18 +178,18 @@ function doctorLipsing(start) {
 }
 
 function showDialog(feedback) {
-    $('.doctor-feedback').removeClass("show-feedback");
-    $('.doctor-face').addClass("show-d-face");
+    $('.student-feedback').removeClass("show-feedback");
+    $('.student-face').addClass("show-d-face");
 
     setTimeout(function() {
-        $('.doctor-feedback').html('<p>' + feedback + '</p>');
-        $('.doctor-feedback').addClass("show-feedback");
+        $('.student-feedback').html('<p>' + feedback + '</p>');
+        $('.student-feedback').addClass("show-feedback");
     }, 500);
 }
 
 function hideDialog() {
-    $('.doctor-feedback').removeClass("show-feedback");
-    $('.doctor-face').removeClass("show-d-face");
+    $('.student-feedback').removeClass("show-feedback");
+    $('.student-face').removeClass("show-d-face");
 }
 
 function showFeedback(nodeList, resetIndex, callback) {

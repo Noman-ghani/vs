@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use App\Models\Doctors;
+use App\Models\Students;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Validator;
@@ -58,7 +58,7 @@ class UserController extends FrontController
             $data[] = ['name'=> $key, 'contents'=>$value];
         }
         
-        $endpoint = url('securedportal/api/doctor/register');
+        $endpoint = url('securedportal/api/student/register');
         $client = new \GuzzleHttp\Client();
 
         try {

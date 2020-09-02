@@ -62,8 +62,8 @@ Route::group(['middleware' => 'auth'], function () {
     /**
      * Modules
     */
-    Route::post('/modules/section/update', '\App\Http\Controllers\ModulesController@updateDoctorCurrentSection');
-    Route::post('/modules/timespent/update', '\App\Http\Controllers\ModulesController@updateDoctorTimespentLog');
+    Route::post('/modules/section/update', '\App\Http\Controllers\ModulesController@updateStudentCurrentSection');
+    Route::post('/modules/timespent/update', '\App\Http\Controllers\ModulesController@updateStudentTimespentLog');
     // Route::get('/modules/', function () {
     //     return view('modules');
     // })->name('modules');

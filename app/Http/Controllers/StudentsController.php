@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Doctors;
+use App\Models\Students;
 use App\User;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Carbon;
@@ -12,22 +12,20 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use App\Http\Controllers\MailController;
 
-class DoctorsController extends Controller
+class StudentsController extends Controller
 {
-    private $doctor;
+    private $student;
     private $user;
 
-    public function __construct(Doctors $doctor, User $user)
+    public function __construct(Students $student, User $user)
     {
-        $this->doctor = $doctor;
+        $this->student = $student;
         $this->user = $user;
         $this->message = [
             'mobile_no.regex'                           => 'Only Numbers allow.',
             'alternate_contact_no.regex'                => 'Only Numbers allow.',
-            'pmdc_registration_number.regex'            => 'PMDC number requires minimum 3 characters with 1 letter, 1 number and a hyphen (-).',
             'workplace_type.required_if'                => 'Workplace type is required.',
-            'address_government_hospital.required_if'   => "Gov't hospital address is required.",
-            'address_private_hospital.required_if'      => 'Private Hospital/Clinic address is required.',
+            'address_personal_workplace.required_if'   => "Gov't hospital address is required.",
             'work_experience.required_if'               => 'Work experience is required.',
             'cnic.required'                             => 'CNIC number is required.',
             'password.required'                         => 'Password is required.',
@@ -45,11 +43,11 @@ class DoctorsController extends Controller
         $sortRequest = $request->get('sort');
         $sortOrder = $request->get('sort_order') == 'true' ? 'desc' : 'asc';
         
-        $results = Doctors::with(['user' => function($q){
+        $results = Students::with(['user' => function($q){
             $q->select('id', 'firstname','lastname','email', 'is_active')
             ->where('is_deleted',0);
         }])
-        ->join('users','doctors.user_id','=','users.id')->where('doctors.is_deleted',0);
+        ->join('users','students.user_id','=','users.id')->where('students.is_deleted',0);
 
         
         if($request->get('firstname')){
@@ -63,22 +61,19 @@ class DoctorsController extends Controller
         }
         if($request->get('created_at')){
             $created_at_request = $request->get('created_at').'%';
-            $results->where('doctors.created_at', 'like', $created_at_request);
+            $results->where('students.created_at', 'like', $created_at_request);
         }
         if($request->get('cnic')){
             $results->where('cnic','like','%' . $request->get('cnic') . '%');
         }
-        if($request->get('pmdc_no')){
-            $results->where('pmdc_registration_number','like','%' . $request->get('pmdc_no') . '%');
-        }
-        if($request->get('is_doctor') != null){
-            $results->where('are_you_doctor',$request->get('is_doctor'));
+        if($request->get('is_student') != null){
+            $results->where('std_active',$request->get('is_student'));
         }
         
         if ($sortRequest){
             $results->orderBy($sortRequest, $sortOrder);
         }else{
-            $results->orderBy('doctors.id', 'desc');
+            $results->orderBy('students.id', 'desc');
         }
         $results = $results->paginate($record);
         
@@ -102,7 +97,7 @@ class DoctorsController extends Controller
     public function store(Request $request)
     {
         $TMP_validation = [
-            'are_you_doctor'                => 'required',
+            'std_active'                => 'required',
             'firstname'                     => 'required|regex:/^[a-zA-Z ]+$/u',
             'lastname'                      => 'required|regex:/^[a-zA-Z ]+$/u',
             'email'                         => 'required|email|unique:App\User,email',
@@ -111,14 +106,12 @@ class DoctorsController extends Controller
             'province'                      => 'required',
             'district'                      => 'required',
             'basic_qualification'           => 'required',
-            'cnic'                          => 'required|unique:doctors,cnic|min:13|max:15|regex:"^[0-9-]*$"',
+            'cnic'                          => 'required|unique:students,cnic|min:13|max:15|regex:"^[0-9-]*$"',
             'password'                      => 'required|confirmed|min:8',
             'password_confirmation'         => 'required',
-            'workplace_type'                => 'required_if:are_you_doctor,1',
-            'address_government_hospital'   => 'required_if:workplace_type,government',
-            'address_private_hospital'      => 'required_if:workplace_type,private',
-            'pmdc_registration_number'      => 'nullable|unique:doctors,pmdc_registration_number|regex:"^(?=.*\d-)[A-Za-z\d-]{3,}$"',
-            'work_experience'               => 'required_if:are_you_doctor,1',
+            'work_experience'               => 'required_if:std_active,1',
+            'workplace_type'                => 'required_if:std_active,1',
+            'address_personal_workplace'    => 'required_if:workplace_type,government',
             'image'                         => 'nullable|image|mimes:jpeg,png,jpg|max:1000',
         ];
        
@@ -140,7 +133,7 @@ class DoctorsController extends Controller
             );
             $insertedUser = $this->user->create($userData);
             if ($request->image) {
-            $folder = public_path('images/doctors/' . $insertedUser->id  . '/');
+            $folder = public_path('images/students/' . $insertedUser->id  . '/');
            
             if (File::exists($folder)) {
                 File::deleteDirectory($folder);
@@ -152,10 +145,10 @@ class DoctorsController extends Controller
             
                 $this->uploadImage($request,$folder);
             }
-            $this->doctor->user_id = $insertedUser->id;
-            $this->doctor->fill($request->all());
-            $this->doctor->other_qualification = $request->other_qualification;
-            $this->doctor->save();
+            $this->student->user_id = $insertedUser->id;
+            $this->student->fill($request->all());
+            $this->student->other_qualification = $request->other_qualification;
+            $this->student->save();
             $name = $request->firstname. ' ' .$request->lastname;
             MailController::congratesEmail(['name' => $name, 'email' => $request->email]);
         }
@@ -167,7 +160,7 @@ class DoctorsController extends Controller
     {
         
 
-        $results = Doctors::with(['user' => function($q) {
+        $results = Students::with(['user' => function($q) {
             $q->select('id', 'firstname','lastname','email')
             ->where('is_deleted',0);
         }])
@@ -176,7 +169,7 @@ class DoctorsController extends Controller
         
         $results_final =  $results->first(); 
         // dd($results_final);
-        $folder = public_path('images/doctors/' . $results_final->user->id );
+        $folder = public_path('images/students/' . $results_final->user->id );
         
         $image = '';
        
@@ -195,10 +188,10 @@ class DoctorsController extends Controller
 
     public function update_by_id(Request $request, $id)
     {
-        $doctor_id = $this->doctor::select('id')->where('user_id',$id)->first();
+        $student_id = $this->student::select('id')->where('user_id',$id)->first();
         
         $TMP_validation = [
-            'are_you_doctor'                => 'required',
+            'std_active'                    => 'required',
             'firstname'                     => 'required|regex:/^[a-zA-Z]+$/u',
             'lastname'                      => 'required|regex:/^[a-zA-Z]+$/u',
             'email'                         => 'required|email|unique:App\User,email,'.$request->user_id,
@@ -206,19 +199,15 @@ class DoctorsController extends Controller
             'province'                      => 'required',
             'district'                      => 'required',
             'basic_qualification'           => 'required',
-            'cnic'                          => 'required|min:13|max:15|regex:"^[0-9-]*$"|unique:App\Models\Doctors,cnic,'.$doctor_id->id,
+            'cnic'                          => 'required|min:13|max:15|regex:"^[0-9-]*$"|unique:App\Models\Students,cnic,'.$student_id->id,
             'password'                      => 'min:8|confirmed|nullable',
-            'workplace_type'                => 'required_if:are_you_doctor,1',
-            'address_government_hospital'   => 'required_if:workplace_type,government',
-            'address_private_hospital'      => 'required_if:workplace_type,private',
-            'work_experience'               => 'required_if:are_you_doctor,1',
+            'workplace_type'                => 'required_if:std_active,1',
+            'address_personal_workplace'    => 'required_if:workplace_type,government',
+            'work_experience'               => 'required_if:std_active,1',
             'image'                         => 'nullable|image|mimes:jpeg,png,jpg|max:1024',
         ];
         if($request->alternate_contact_no && $request->alternate_contact_no != 'null'){
             $TMP_validation['alternate_contact_no'] = 'min:10|max:11|regex:"^[0-9]*$"';
-        }
-        if($request->pmdc_registration_number && $request->pmdc_registration_number != 'null'){
-            $TMP_validation['pmdc_registration_number'] = 'regex:"^(?=.*\d-)[A-Za-z\d-]{3,}$"|unique:App\Models\Doctors,pmdc_registration_number,'.$doctor_id->id;
         }
         $validator = Validator::make($request->all(), $TMP_validation,$this->message);
         
@@ -235,7 +224,7 @@ class DoctorsController extends Controller
                 }
                 $usera->save();
                 if ($request->image) {
-                    $folder = public_path('images/doctors/' . $request->user_id  . '/');
+                    $folder = public_path('images/students/' . $request->user_id  . '/');
 
                     if (File::exists($folder)) {
                         File::deleteDirectory($folder);
@@ -249,19 +238,19 @@ class DoctorsController extends Controller
                     }
                 }
                 
-                $this->doctor = $this->doctor->find($doctor_id->id);
-                $this->doctor->fill($request->all());
+                $this->student = $this->student->find($student_id->id);
+                $this->student->fill($request->all());
                 if($request->alternate_contact_no == "null"){
-                    $this->doctor->alternate_contact_no = null;
+                    $this->student->alternate_contact_no = null;
                 }
                 if($request->pmdc_registration_number == "null"){
-                    $this->doctor->pmdc_registration_number = null;
+                    $this->student->pmdc_registration_number = null;
                 }
                 if($request->password == "null"){
-                    $this->doctor->password = null;
+                    $this->student->password = null;
                 }
-                $this->doctor->other_qualification = $request->other_qualification;
-                $this->doctor->save();
+                $this->student->other_qualification = $request->other_qualification;
+                $this->student->save();
             }
         return response()->json(['success' => true], 200);
     }
@@ -277,11 +266,11 @@ class DoctorsController extends Controller
 
     public function soft_delete_by_id(Request $request, $id)
     {
-        $this->doctor = $this->doctor->find($id);
-        $this->doctor->is_deleted = 1;
-        $this->doctor->save();
+        $this->student = $this->student->find($id);
+        $this->student->is_deleted = 1;
+        $this->student->save();
         
-        $user = $this->user->where('id',$this->doctor->user_id)->first();
+        $user = $this->user->where('id',$this->student->user_id)->first();
         $user->is_deleted = 1;
         $user->save();
     }

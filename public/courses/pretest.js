@@ -99,13 +99,13 @@ function goToScreen(sectionNo, score) {
 
         toggleBox(sectionNo);
 
-        toggleDoctor(introductory.sections[sectionNo], function(section) {
+        toggleStudent(introductory.sections[sectionNo], function(section) {
             // SWITCHING BACKGROUND IF QUESTION SCREEN
             if (section.pretest) {
                 setTimeout(() => {
                     $('#navBtn').hide();
                 }, 1000);
-                $('.doctor_sitting').show().animate({ 'right': '2vw' }, 1000);
+                $('.student_sitting').show().animate({ 'right': '2vw' }, 1000);
                 $('.table-chair').animate({ 'left': '-200vw' }, 1000);
                 $('.door').animate({ 'bottom': '-50vw' }, 1000);
             } else {
@@ -113,10 +113,10 @@ function goToScreen(sectionNo, score) {
                     $('#navBtn').show();
                 }, 1000);
 
-                $('.doctor_sitting').animate({ 'right': '-35vw' }, 1000);
+                $('.student_sitting').animate({ 'right': '-35vw' }, 1000);
                 $('.table-chair').animate({ 'left': '0' }, 1000);
                 $('.door').animate({ 'bottom': '0' }, 1000);
-                if (section.doctor === "lady") {
+                if (section.student === "lady") {
                     $('.logo').animate({ 'opacity': '0' }, 1000);
                 } else {
                     $('.logo').animate({ 'opacity': '1' }, 1000);

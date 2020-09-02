@@ -51,7 +51,7 @@
                     <DoughnutChart :labels="pieLabels" title="Province Wise Breakup" :data="pieData" v-if="showChart"/>
                 </div>
                 <!-- <div class="col-sm-6">
-                    <LineChart  title="Total Registered doctors" :label="'Total Registered'" :data="lineData" v-if="showChart"/>
+                    <LineChart  title="Total Registered students" :label="'Total Registered'" :data="lineData" v-if="showChart"/>
                 </div>
                 <div class="col-sm-6">
                     <AreaChart :labels="['Total Register','Students','Non Students']" title="Total Records" :dataset="areadataset" v-if="showChart"/> 
@@ -126,15 +126,15 @@ export default {
                     this.post = response.data.results;
                     // this.barData = response.data.bardata;
                     let registerd   = [];
-                    let is_doctor   = [];
-                    let non_doctor = [];
+                    let is_student   = [];
+                    let non_student = [];
                     this.barLabel = [];
                     //Get label for bar chart
                     for (const data of response.data.bardata) {
                         this.barLabel.push(data.monthname);
                         registerd.push(data.registered);
-                        is_doctor.push(data.is_doctor);
-                        non_doctor.push(data.non_doctor);
+                        is_student.push(data.is_student);
+                        non_student.push(data.non_student);
                     }
                     //Get data for bar chart
                     this.barData = [
@@ -147,14 +147,14 @@ export default {
                         },
                         {
                             label: "Students",
-                            data : is_doctor,
+                            data : is_student,
                             backgroundColor: this.$helpers.generator_random_rgba(0.5),
                             borderColor: this.$helpers.generator_random_rgba(),
                             borderWidth:2
                         },
                         {
                             label: "Non Students",
-                            data : non_doctor,
+                            data : non_student,
                             backgroundColor: this.$helpers.generator_random_rgba(0.5),
                             borderColor: this.$helpers.generator_random_rgba(),
                             borderWidth:2

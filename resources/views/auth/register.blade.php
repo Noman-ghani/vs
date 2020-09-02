@@ -15,18 +15,18 @@
                         <label>Are You A Student? <span class="strik">*</span></label>
                         <div class="radio-wrp full-width flex ">
                             <div class="radio">
-                                <input name="are_you_doctor" id="are_you_doctor_yes" type="radio" value="1" checked="checked">
-                                <label for="are_you_doctor_yes" class="radio-label" for="chkYes">Yes</label>
+                                <input name="std_active" id="std_active_yes" type="radio" value="1" checked="checked">
+                                <label for="std_active_yes" class="radio-label" for="chkYes">Yes</label>
                             </div>
                             <div class="radio">
-                                <input name="are_you_doctor" id="are_you_doctor_no" type="radio" value="0">
-                                <label for="are_you_doctor_no" class="radio-label">No</label>
+                                <input name="std_active" id="std_active_no" type="radio" value="0">
+                                <label for="std_active_no" class="radio-label">No</label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="doctor">
-                    <form action="/user/register" id="doctor_form" class="user_register_form" method="post" enctype="multipart/form-data">
+                <div class="student">
+                    <form action="/user/register" id="student_form" class="user_register_form" method="post" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="role_id" value="2">
                         <div class="width100">
@@ -168,8 +168,8 @@
                     </form>
                 </div>
 
-                <div class="none-doctor" style="display: none;">
-                    <form action="/user/register" id="non_doctor_form" class="user_register_form" method="post" enctype="multipart/form-data">
+                <div class="none-student" style="display: none;">
+                    <form action="/user/register" id="non_student_form" class="user_register_form" method="post" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="role_id" value="2">
                         

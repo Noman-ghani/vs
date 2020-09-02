@@ -41,7 +41,7 @@ export default {
         //     data: this.data
         //   },
         //   {
-        //     label: "doctors",
+        //     label: "students",
         //     borderColor: "#05CBE1",
         //     pointBackgroundColor: "white",
         //     pointBorderColor: "white",
@@ -50,7 +50,7 @@ export default {
         //     data: [60, 55, 32, 10, 2, 12, 53, 55, 32, 10, 2, 12]
         //   },
         //   {
-        //     label: "doctors",
+        //     label: "students",
         //     borderColor: "#05CBE1",
         //     pointBackgroundColor: "white",
         //     pointBorderColor: "white",

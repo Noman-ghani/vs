@@ -29496,7 +29496,7 @@ body input[type=checkbox] + label.custom-control-label{
 }
 @media(max-width:1600px){
     .min-180{
-        min-width:180px;
+        min-width:220px;
     }
 }
 @media(max-width:1440px){

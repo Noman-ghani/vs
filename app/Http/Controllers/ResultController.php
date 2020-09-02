@@ -28,14 +28,14 @@ class ResultController extends Controller
         $sortRequest = $request->get('sort');
         $sortOrder = $request->get('sort_order') == 'true' ? 'desc' : 'asc';
         $record = (int)$request->get('record');
-        $results = $this->result::select(DB::raw("CONCAT(users.firstname, ' ', users.lastname) AS doctor,mcqs.type as type, count(distinct mcqs_attempt.mcq_id) AS attempts, count(if(mcqs_answers.is_correct = 1, mcqs_answers.id, null)) as correct,mcqs_attempt.user_id"))
+        $results = $this->result::select(DB::raw("CONCAT(users.firstname, ' ', users.lastname) AS student,mcqs.type as type, count(distinct mcqs_attempt.mcq_id) AS attempts, count(if(mcqs_answers.is_correct = 1, mcqs_answers.id, null)) as correct,mcqs_attempt.user_id"))
                                                 ->join('users','users.id','=','mcqs_attempt.user_id')
                                                 ->join('mcqs_answers','mcqs_answers.id','=','mcqs_attempt.mcq_answer_id')
                                                 ->join('mcqs','mcqs.id','=','mcqs_attempt.mcq_id')
-                                                ->groupBy('doctor','mcqs_attempt.user_id');
-        if($request->get('doctor')){
-            $results->where('users.firstname','like','%' . $request->get('doctor') . '%')
-            ->orWhere('users.lastname','like','%' . $request->get('doctor') . '%');
+                                                ->groupBy('student','mcqs_attempt.user_id');
+        if($request->get('student')){
+            $results->where('users.firstname','like','%' . $request->get('student') . '%')
+            ->orWhere('users.lastname','like','%' . $request->get('student') . '%');
         }
         if($request->get('type')){
             $results->where('mcqs.type',$request->get('type'));       
@@ -66,12 +66,12 @@ class ResultController extends Controller
     public function get_by_id(Request $request,$id)
     {   
         
-        $summaryResult = $this->result::select(DB::raw("CONCAT(users.firstname, ' ', users.lastname) AS doctor,users.email, count(distinct mcqs_attempt.mcq_id) AS attempts, count(if(mcqs_answers.is_correct = 1, mcqs_answers.id, null)) as correct"))
+        $summaryResult = $this->result::select(DB::raw("CONCAT(users.firstname, ' ', users.lastname) AS student,users.email, count(distinct mcqs_attempt.mcq_id) AS attempts, count(if(mcqs_answers.is_correct = 1, mcqs_answers.id, null)) as correct"))
                                                 ->join('users','users.id','=','mcqs_attempt.user_id')
                                                 ->join('mcqs_answers','mcqs_answers.id','=','mcqs_attempt.mcq_answer_id')
                                                 
                                                 ->where('mcqs_attempt.user_id',$id)
-                                                ->groupBy('doctor','users.email')->first();
+                                                ->groupBy('student','users.email')->first();
        
         $results = $this->result::select('*', DB::raw('mcqs.type as type,(CASE WHEN mcqs_answers.is_correct = 1 THEN mcqs_answers.id ELSE 0 END) AS correct_answer_id'))->with(['mcqs','mcqs_answers'])
         ->whereHas('mcqs' , function($q){
@@ -84,7 +84,7 @@ class ResultController extends Controller
             $results = $results->where('type',$request->type);
         }
         $TMP_results    = [
-            'name'  => $summaryResult->doctor ,
+            'name'  => $summaryResult->student ,
             'email' => $summaryResult->email,
             'total_attempts' => $summaryResult->attempts,
             'total_correct' => $summaryResult->correct

@@ -5,7 +5,7 @@
         "1": {
             "type": "narrative",
             "content": "<div class='box-bg'></div><div class='module-logos'><span class='ntp-logo logos'><img src='/assets/images/pretest/ntp-logo.svg' alt='ntp-logo'></span><span class='govt-logo logos'><img src='/assets/images/pretest/govt-logo.svg' alt='govt-logo'></span><span class='sustainble-logo logos'><img src='/assets/images/pretest/sustainble-logo.svg' alt='sustainble-logo'></span></div><h1>Module 1</h1><p>Introduction to basics of TB & its control in Pakistan</p>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-1 content-height",
             "buttons": {
                 "backBtn": "",
@@ -15,7 +15,7 @@
         "2": {
             "type": "narrative",
             "content": "<h1>Module Objectives</h1><div class='pra-wrp'><p><span class='list-arrows'><img src='/assets/images/pretest/arrows.svg' align='arrows'></span>Know some facts of Tuberculosis and the burden of disease.</p><p><span class='list-arrows'><img src='/assets/images/pretest/arrows.svg' align='arrows'></span>Know the strategies for the control of TB in Pakistan.</p><p><span class='list-arrows'><img src='/assets/images/pretest/arrows.svg' align='arrows'></span>National Tuberculosis control program - its structure and function.</p><p><span class='list-arrows'><img src='/assets/images/pretest/arrows.svg' align='arrows'></span>Know the basics of Tuberculosis.</p></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-2",
             "buttons": {
                 "backBtn": "Back",
@@ -25,7 +25,7 @@
         "3": {
             "type": "narrative",
             "content": "<h2>Facts About TB</h2><div class='content-wrapper'><div class='content'><div class='listing'><ol class='number-listing'><li>Tuberculosis is an old disease, Signs of this disease were found in Egyptian mummies of 2400 years BC.</li><li>German scientist Dr. Robert Koch described the causative bacteria of Tuberculosis, Mycobacterium tuberculosis, on 24 March, 1882.</li></ol></div><div class='facts-about'><span class='pyramid facts'><img src='/assets/images/pretest/pyramid.svg' alt='pyramid'></span><span class='robert-koch facts'><img src='/assets/images/pretest/robert-koch.svg' alt='robert-koch'></span><span class='mummy facts'><img src='/assets/images/pretest/mummy.svg' alt='mummy'></span></div></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-3",
             "buttons": {
                 "backBtn": "Back",
@@ -35,7 +35,7 @@
         "4": {
             "type": "narrative",
             "content": "<h2>Facts About TB</h2><div class='content-wrapper'><div class='listing'></div><ol class='number-listing'><li>TB is an Infectious disease caused by bacteria called Mycobacterium Tuberculosis.</li><li>TB spreads via airborne particles called droplet nuclei.</li><li>TB can affect any organ of the body - including all tube and cavities.</li><li>Pulmonary TB, which affects lungs is more common and contagious.</li><li>75% TB patients are in the economically productive age group (15-54 years).</li></ol></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-4",
             "buttons": {
                 "backBtn": "Back",
@@ -45,7 +45,7 @@
         "5": {
             "type": "narrative",
             "content": "<h2>Facts About TB</h2><div class='content-wrapper'><ol class='number-listing'><li>One untreated sputum positive patient can transmit TB to 10-15 contacts persons in a year.</li><li>80-85% TB patients are in developing countries.</li><li>A large number of TB patients are either not diagnosed or not reported to district authorities.</li><li>An incompletely treated TB patient is likely to develop drug-resistant TB.</li><li>The AIDS epidemic has serious consequences on TB epidemiology.</li></ol></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-5",
             "buttons": {
                 "backBtn": "Back",
@@ -55,7 +55,7 @@
         "6": {
             "type": "narrative",
             "content": "<h2>Milestones - TB control program</h2><div class='content-wrapper'><div class='history-wrp'><span class='map-history nine_forty_four'><strong>1944</strong>Chemotherapy Era, Discovery of Anti TB Drugs.<span class='show-arrow right-bottom'><img src='/assets/images/pretest/right-bottom.svg'></span></span><span class='map-history nine_fifty'><strong>1950</strong>Progressive decline in TB incidence in the developed countries.<span class='show-arrow right-top'><img src='/assets/images/pretest/right-top.svg'></span></span><span class='pakistan-map'><img src='/assets/images/pretest/pak-map.svg' alt='pakistan-map'></span><span class='map-history nine_ninety_three'><strong>1993</strong>The World Health Organization declared tuberculosis a Global Emergency.<span class='show-arrow left-top'><img src='/assets/images/pretest/left-bottom.svg'></span></span><span class='map-history nine_ninety_five'><strong>1995</strong>The World Health Organization launched DOTs strategy.<span class='show-arrow left-bottom'><img src='/assets/images/pretest/left-top.svg'></span></span></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-6",
             "buttons": {
                 "backBtn": "Back",
@@ -65,7 +65,7 @@
         "7": {
             "type": "narrative",
             "content": "<h2>Milestones - TB control program<span class='subheading'><b>(Pakistan)</b></span></h2><div class='content-wrapper'><div class='history-wrp'><span class='map-history towthousand_one'><strong>2001</strong>TB declared as National Emergency & Pakistan adopts DOTS strategy.<span class='show-arrow right-bottom'><img src='/assets/images/pretest/left-top.svg'></span></span><span class='map-history towthousand_five'><strong>2005</strong>100% DOTS achieved in public sector health facilities.</span><span class='pakistan-map'><img src='/assets/images/pretest/pak-map2.svg' alt='pakistan-map'></span><span class='map-history towthousand_six'><strong>2006</strong>TB DOTS started in private sector facilities.<span class='show-arrow left-top'><img src='/assets/images/pretest/left-top.svg'></span></span><span class='map-history towthousand_ten'><strong>2010</strong>Programmatic Management of Drug-Resistant Tuberculosis initiated.<span class='show-arrow left-bottom'><img src='/assets/images/pretest/left-top.svg'></span></span><span class='map-history towthousand_eleven'><strong>2011</strong>4th TB Prevalence survey conducted.<span class='show-arrow left-bottom'><img src='/assets/images/pretest/left-top.svg'></span></span><span class='map-history towthousand_eleven2'><strong>2011</strong>WHO Recommended rapid diagnosis (Xpert MTB/Rif) introduced in Pakistan.<span class='show-arrow left-bottom'><img src='/assets/images/pretest/left-top.svg'></span></span><span class='map-history towthousand_seventeen'><strong>2017</strong>Active TB case finding initiated.<span class='show-arrow left-bottom'><img src='/assets/images/pretest/left-top.svg'></span></span></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-7",
             "buttons": {
                 "backBtn": "Back",
@@ -75,7 +75,7 @@
         "8": {
             "type": "narrative",
             "content": "<h2>Global TB situation<span class='subheading'> (Global TB report 2019)</span></h2><div class='content-wrapper'><div class='report-wrp'><ol class='number-listing'><li>TB remains the top infectious killer worldwide.</li><li>10 million people fell ill with TB in 2018.</li><li>About 7 million people were reported to have been reached with quality TB care in 2018.</li><li>About 3 million people with TB did not access quality care in 2018 (missing cases).</li><li>TB-related deaths dropped from 1.6 million in 2017 to 1.5 million in 2018.</li></ol><div class='report-img'><img src='/assets/images/pretest/report.svg' alt='report'></div></div></div></div><a href='https://www.who.int/tb/publications/global_report/en/' target='_blank' class='click-box'><span class='pdf-icon'><img src='/assets/images/pretest/pdf.svg' alt='pdf icon'></span>https://www.who.int/tb/publications/global_report/en/</a>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-8",
             "buttons": {
                 "backBtn": "Back",
@@ -85,7 +85,7 @@
         "9": {
             "type": "narrative",
             "content": "<h2>Global TB situation<span class='subheading'> (Global TB report 2019)</span></h2><div class='content-wrapper'><ol class='number-listing'><li>Eight countries accounted for two-thirds of the global total TB burden. India, China, Indonesia, Philippines, <span class='red-highlight'>Pakistan</span>, Nigeria, Bangladesh & South Africa.</li><li>Drug-resistant TB continues to be a public health threat.</li><li>There were about 500,000 new cases of rifampicin-resistant TB.</li><li>Only one in four people of DR TB patient had access to DR TB treatment.</li><li>The treatment success rate for DR TB is 56%.</li></ol><a href='https://www.who.int/tb/publications/global_report/en/' target='_blank' class='click-box'><span class='pdf-icon'><img src='/assets/images/pretest/pdf.svg' alt='pdf icon'></span>https://www.who.int/tb/publications/global_report/en/</a></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-9",
             "buttons": {
                 "backBtn": "Back",
@@ -95,7 +95,7 @@
         "10": {
             "type": "narrative",
             "content": "<h2>The Situation of TB in Pakistan</h2><div class='content-wrapper'><ol class='number-listing'><li>Tuberculosis is one of the major public health problems in Pakistan.</li><li>Pakistan ranks 5<sup>th</sup> in Drug-susceptible and Drug-resistant TB among 30 high-burden countries.</li><li>562,000 people developed active Tuberculosis in Pakistan in 2018.</li><li>The incidence of TB is 265 per 100,000 populations.</li><li>64% TB patients were detected & treated in 2018.</li><li>93% of them were successfully treated.</li><li>1/3 TB patients are missed every year.</li></ol></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-10",
             "buttons": {
                 "backBtn": "Back",
@@ -105,7 +105,7 @@
         "11": {
             "type": "narrative",
             "content": "<h2>The Situation of TB in Pakistan</h2><div class='content-wrapper'><ol class='number-listing'><li>Estimated 28000 people had Drug-resistant TB.</li><li>MDR/RR-TB incidence is 13/100,000.</li><li>11% are treated for MDR-TB care.</li><li>63% are successfully treated.</li><li>3800 peoples living with HIV fell ill with TB.</li><li>44000 people die of TB every year, 20 deaths/100,000</li></ol></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-11",
             "buttons": {
                 "backBtn": "Back",
@@ -115,7 +115,7 @@
         "12": {
             "type": "narrative",
             "content": "<h2>Evolution of WHO Strategies and Targets</h2><div class='content-wrapper'><ul class='strategies-list'><li><span class='strategies-img'><img src='/assets/images/pretest/dost.jpg' alt='Dost'></span><h3 class='strategies-heading'>DOTS</h3><span class='strategies-date'>1994-2005</span><p>70% case detection rate <br> 85% Treatment success rate.</p></li><li class='strategies-width'><span class='strategies-icon'><img src='/assets/images/pretest/strategies-icon.svg' alt='end-tb'></span></li><li><span class='strategies-img'><img src='/assets/images/pretest/stop-tb.jpg' alt='stop-tb'></span><h3 class='strategies-heading'>STOP TB</h3><span class='strategies-date'>2006-2015</span><p>Halt and began to reverse the incidence of TB by 2015 (MDG) Prevalence & death: by 50% STP</p></li><li class='strategies-width'><span class='strategies-icon'><img src='/assets/images/pretest/strategies-icon.svg' alt='end-tb'></span></li><li><span class='strategies-img'><img src='/assets/images/pretest/end-tb.jpg' alt='end-tb'></span><h3 class='strategies-heading'>END TB</h3><span class='strategies-date'>2015-2035</span><p><10 TB cases per 100,000 population</p></li></ul></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-12",
             "buttons": {
                 "backBtn": "Back",
@@ -125,7 +125,7 @@
         "13": {
             "type": "narrative",
             "content": "<h2>Sustainable Development Goals <span class='subheading'>(The 2030 Agenda)</span></h2><div class='content-wrapper'><p class='green-clor'>Sustainable Development Goal 3</p><div class='clr_box'><span class='circle-logo'><img src='/assets/images/pretest/sustainble-logo.svg' alt='sustainble-logo'></span><p class='mudim'>Ensure healthy lives and promote well-being for all at all ages</p><p>“By 2030, end the epidemics of AIDS, Tuberculosis, malaria and neglected tropical diseases, and combat Hepatitis, Water-borne diseases, and other communicable diseases.”</p></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-13",
             "buttons": {
                 "backBtn": "Back",
@@ -135,7 +135,7 @@
         "14": {
             "type": "narrative",
             "content": "<h2>END TB Strategy</h2><div class='content-wrapper'><p class='green-clor'>The End TB strategy aims</p><div class='report-wrp'><ul class='set-bullets'><li>To end the global TB epidemic and provide a unified response to ending TB deaths, disease, and suffering.</li><li>To reduce TB deaths by 95% and to cut new cases by 90% between 2015 and 2035.</li><li>To ensure that no family is burdened with catastrophic expenses due to TB.</li><li>It sets interim milestones for 2020, 2025, and 2030.</li></ul><div class='report-img'><img src='/assets/images/pretest/end-tb.svg' alt='end-tb'></div></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-14",
             "buttons": {
                 "backBtn": "Back",
@@ -145,7 +145,7 @@
         "15": {
             "type": "narrative",
             "content": "<div class='box-bg'></div><h2>National TB Control Program, Pakistan</h2><div class='content-wrapper'><span class='subheading'>Ministry of National Health Services, Regulation and Coordination (NHSR&C), Government of Pakistan.</span><div class='report-wrp'><ul class='number-listing'><li>National Policy & guidelines</li><li>Technical assistance</li><li>Oversight & Coordination</li><li>Resource mobilization</li><li>Grant management</li><li>International reporting</li><li>Monitoring & Evaluation</li><li>Research & Surveillance</li></ul></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-15",
             "buttons": {
                 "backBtn": "Back",
@@ -155,7 +155,7 @@
         "16": {
             "type": "narrative",
             "content": "<h2>Provincial TB Control Program</h2><div class='content-wrapper'><div class='content-wrapper'><div class='report-wrp'><ol class='number-listing'><li>Planning</li><li>Implementation</li><li>Monitoring and Supervision</li><li>Coordination</li><li>Logistics support</li><li>Data Reporting & Analysis</li></ol><div class='report-img'><img src='/assets/images/pretest/control-program.svg' alt='control-program'></div></div></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-16",
             "buttons": {
                 "backBtn": "Back",
@@ -165,7 +165,7 @@
         "17": {
             "type": "narrative",
             "content": "<h2>District TB Control Program</h2><div class='content-wrapper'><div class='report-wrp'><ol class='number-listing'><li>Planning</li><li>TB case management both in the public & private sector</li><li>Recording and reporting</li><li>Monitoring & supervision</li><li>Data Analysis</li></ol><div class='report-img'><img src='/assets/images/pretest/control-program.svg' alt='control-program'></div></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-17",
             "buttons": {
                 "backBtn": "Back",
@@ -175,7 +175,7 @@
         "18": {
             "type": "narrative",
             "content": "<h2>National Strategic Plan TB</h2><span class='subheading'>National strategic plan to End TB (2020 - 2023) is aligned with WHO End TB strategy & SDGs.</span><div class='content-wrapper'><div class='National_s'><div class='National_box'><span class='National_icon'><img src='/assets/images/pretest/vision.svg' align='Vision'></span><span class='iconheading green-clor'>Vision</span><p class='sub_para green-clor'>2020 - 2023</p><p>TB free Pakistan with zero deaths, disease, and poverty cause by TB.</p></div><div class='National_box'><span class='National_icon'><img src='/assets/images/pretest/mission.svg' align='Mission'></span><span class='iconheading green-clor'>Mission</span><p>To effectively end the TB pandemic in Pakistan by 2035.</p></div></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-18",
             "buttons": {
                 "backBtn": "Back",
@@ -185,7 +185,7 @@
         "19": {
             "type": "narrative",
             "content": "<h2>National Strategic Plan - TB</h2><div class='content-wrapper'><div class='report-wrp'><div class='goal-wpr'><span class='goal'><strong>Goal:</strong>To reduce by 50% the prevalence of TB in the general population by 2025 in comparison with 2012.</span><span class='subheading green-clor'>Target For Four Years (2020-2023):</span><ul class='set-bullets'><li>1.9 million people successfully Treated.</li><li>1.6 million started on preventive treatment.</li></ul></div><div class='report-img'><img src='/assets/images/pretest/plan.jpg' alt='plan'></div></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-19",
             "buttons": {
                 "backBtn": "Back",
@@ -195,7 +195,7 @@
         "20": {
             "type": "narrative",
             "content": "<h2>Causative Organism & Mode of Spread</h2><div class='content-wrapper'><ol class='number-listing' ><li>Tuberculosis is a highly contagious, systemic, and chronic inflammatory diseases caused by Tubercle bacilli called “Mycobacterium Tuberculosis”.</li><li>M. Tuberculosis is carried in airborne particles, called droplet nuclei. Infectious droplet nuclei are generated when persons who have pulmonary TB disease cough, sneeze, shout, or sing.</li><li>The chance of becoming infected depends mainly on the quantity of infectious droplets in the air, the length of exposure with an infectious person and the immunity of infected person.</li><li>TB is not spread by hand shake, sharing food or utensils, kissing, touching bed linens or toilet seats.</li></ol></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-20",
             "buttons": {
                 "backBtn": "Back",
@@ -205,7 +205,7 @@
         "21": {
             "type": "narrative",
             "content": "<h2>Mycobacterium Tuberculosis</h2><div class='content-wrapper'><span class='subheading'>Rod shaped Tubercle bacilli as seen under microscope.</span><div class='mycobacterium'><img src='/assets/images/pretest/mycobacterium.svg'></div><div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-21",
             "buttons": {
                 "backBtn": "Back",
@@ -215,7 +215,7 @@
         "22": {
             "type": "narrative",
             "content": "<h2>Spread of TB</h2><div class='content-wrapper'><span class='subheading'>TB is spread through airborn particles droplet nuclei from one person to another.</span><div class='mycobacterium'><img src='/assets/images/pretest/spread.jpg'></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-22",
             "buttons": {
                 "backBtn": "Back",
@@ -225,7 +225,7 @@
         "23": {
             "type": "narrative",
             "content": "<h2>TB does not Spread By</h2><div class='content-wrapper'><ul class='imglist'><li><div class='list-img'><img src='/assets/images/pretest/child-img.jpg' alt='child-img'></div></li><li><div class='list-img'><img src='/assets/images/pretest/hand.jpg' alt='hand'></div></li></ul></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-23",
             "buttons": {
                 "backBtn": "Back",
@@ -235,7 +235,7 @@
         "24": {
             "type": "narrative",
             "content": "<h2>Pathogenesis of Tuberculosis</h2><div class='content-wrapper'><ol class='number-listing' ><li>When a person breathes in TB bacteria, the bacilli can settle in the lungs, begin to grow and multiply in the alveoli of lungs.</li><li>Within 2 to 8 weeks, special immune cells called macrophages ingest and surround the tubercle bacilli forming a granuloma.</li><li>Tuberculosis spreads from the primary lung lesion to other parts of the body via the blood stream, lymphatic or by direct extension, and in this way may affect any organ in the body including all tubes and cavities.</li></ol></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-24",
             "buttons": {
                 "backBtn": "Back",
@@ -245,7 +245,7 @@
         "25": {
             "type": "narrative",
             "content": "<h2>Pathogenesis of Tuberculosis</h2><div class='content-wrapper'><span class='subheading'>Tubercle bacilli multiply in the alveoli and Granuloma forms. </span><div class='pathogenesis-wrp'><div class='pathogenesis-box'><img src='/assets/images/pretest/pathogenesis.jpg' alt='pathogenesis'><a href='#' data-src='/assets/images/pretest/pathogenesis.jpg' class='click_enlarge'>Click to enlarge</a></div><div class='pathogenesis-box'><img src='/assets/images/pretest/necrosis.jpg' alt='necrosis'><a href='#' data-src='/assets/images/pretest/necrosis.jpg' class='click_enlarge'>Click to enlarge</a></div></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-25",
             "buttons": {
                 "backBtn": "Back",
@@ -255,7 +255,7 @@
         "26": {
             "type": "narrative",
             "content": "<h2>Pathogenesis of Tuberculosis</h2><div class='content-wrapper'><span class='subheading'>Tuberculosis spreads from the primary lung lesion to other parts of the body.</span><div class='mycobacterium'><img src='/assets/images/pretest/pathogenesis.svg' alt='pathogenesis'></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-26",
             "buttons": {
                 "backBtn": "Back",
@@ -265,7 +265,7 @@
         "27": {
             "type": "narrative",
             "content": "<h2>Video on Pathogenesis of TB</h2><div class='content-wrapper'><div class='video-box'><video  controls><source src='/assets/images/pretest/mov_bbb.mp4' type='video/mp4'><source src='/assets/images/pretest/mov_bbb.ogg' type='video/ogg'></video></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-27",
             "buttons": {
                 "backBtn": "Back",
@@ -275,7 +275,7 @@
         "28": {
             "type": "narrative",
             "content": "<h2>Latent Tuberculosis Infection <span class='subheading'> (LTBI)</span></h2><div class='content-wrapper'><p class='italic'>Persons with LTBI have M. tuberculosis in their bodies, but do not have TB disease and cannot spread the infection to other people.</p><p>The process of LTBI begins when extracellular bacilli are ingested by macrophages and presented to other white blood cells. This triggers the immune response in which white blood cells kill or encapsulate most of the bacilli, leading to the formation of a granuloma.</p></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-28",
             "buttons": {
                 "backBtn": "Back",
@@ -285,7 +285,7 @@
         "29": {
             "type": "narrative",
             "content": "<h2>Pulmonary & Extra Pulmonary Disease</h2><span class='subheading'>TB is classified as Pulmonary (Lungs parenchyma) and Extra-Pulmonary. Based on anatomical site involved.</span><span class='green-clor subheading-inner'>Pulmonary TB</span><div class='content-wrapper'><ul class='imglist'><li><div class='list-img'><img src='/assets/images/pretest/Infiltratory-lesion.jpg' alt='Infiltratory-lesion'></div><span class='green-clor img-title'>Infiltratory Lesion</span><a href='#' data-src='/assets/images/pretest/Infiltratory-lesion.jpg' class='click_enlarge'>Click to enlarge</a></li><li><div class='list-img'><img src='/assets/images/pretest/cavitatory-lesion.jpg' alt='cavitatory-lesion'></div><span class='green-clor img-title'>Cavitatory Lesion </span><a href='#' data-src='/assets/images/pretest/cavitatory-lesion.jpg' class='click_enlarge'>Click to enlarge</a></li><li><div class='list-img'><img src='/assets/images/pretest/milliary-lesion.jpg' alt='milliary-lesion'></div><span class='green-clor img-title'>Milliary Lesion</span><a href='#' data-src='/assets/images/pretest/milliary-lesion.jpg' class='click_enlarge'>Click to enlarge</a></li></ul></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-29",
             "buttons": {
                 "backBtn": "Back",
@@ -295,7 +295,7 @@
         "30": {
             "type": "narrative",
             "content": "<h2>Extra Pulmonary TB</h2><div class='content-wrapper'><ul class='imglist'><li><div class='list-img'><img src='/assets/images/pretest/bones.jpg' alt='bones'></div><span class='green-clor img-title'>Bones</span></li><li><div class='list-img'><img src='/assets/images/pretest/node.jpg' alt='LYHM Node'></div><span class='green-clor img-title'>LYHM Node</span></li><li><div class='list-img'><img src='/assets/images/pretest/meninges.jpg' alt='Meninges'></div><span class='green-clor img-title'>Meninges</span></li><li><div class='list-img'><img src='/assets/images/pretest/kidney.jpg' alt='Kidney'></div><span class='green-clor img-title'>Kidney</span></li></ul></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-30",
             "buttons": {
                 "backBtn": "Back",
@@ -305,7 +305,7 @@
         "31": {
             "type": "narrative",
             "content": "<h2>Extra Pulmonary TB</h2><div class='content-wrapper'><ul class='imglist'><li><div class='list-img'><img src='/assets/images/pretest/pleura.jpg' alt='pleura'></div><span class='green-clor img-title'>Pleura</span></li><li><div class='list-img'><img src='/assets/images/pretest/spine.jpg' alt='spine'></div><span class='green-clor img-title'>Spine</span></li><li><div class='list-img'><img src='/assets/images/pretest/skin.jpg' alt='skin'></div><span class='green-clor img-title'>Skin</span></li><li><div class='list-img'><img src='/assets/images/pretest/abdomen.jpg' alt='abdomen'></div><span class='green-clor img-title'>Abdomen</span></li></ul></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-31",
             "buttons": {
                 "backBtn": "Back",
@@ -315,7 +315,7 @@
         "32": {
             "type": "narrative",
             "content": "<h2>The Signs & Symptoms</h2><div class='content-wrapper'><span class='subheading'>The sign and symptoms of TB vary depending on which part of the body is affected. TB disease usually develops slowly; symptoms might not begin until months or even years after the initial infection.</span><div class='video-box'><video controls><source src='/assets/images/pretest/mov_bbb.mp4' type='video/mp4'><source src='/assets/images/pretest/mov_bbb.ogg' type='video/ogg'></video></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-32",
             "buttons": {
                 "backBtn": "Back",
@@ -325,7 +325,7 @@
         "33": {
             "type": "narrative",
             "content": "<h2>Pulmonary Tuberculosis</h2><span class='green-clor subheading-inner'>Generalized Symptoms</span><span class='subheading'>TB bacteria usually grow in the lungs & may cause symptoms such as</span><div class='content-wrapper'><ul class='generalized-box'><li><div class='generalized-img'><img src='/assets/images/pretest/cough-more.jpg' alt='Cough'></div><span class='green-clor img-title'>Cough More Than Two or More Weeks</span></li><li><div class='generalized-img'><img src='/assets/images/pretest/fever.jpg' alt='Fever'></div><span class='green-clor img-title'>Fever</span></li><li><div class='generalized-img'><img src='/assets/images/pretest/coughing.jpg' alt='Coughing'></div><span class='green-clor img-title'>Coughing Up Blood Stained Sputum</span></li><li><div class='generalized-img'><img src='/assets/images/pretest/pain-in-chest.jpg' alt='Pain In Chest'></div><span class='green-clor img-title'>Pain In Chest</span></li><li><div class='generalized-img'><img src='/assets/images/pretest/weakness.jpg' alt='Weakness or Fatigue'></div><span class='green-clor img-title'>Weakness or Fatigue</span></li><li><div class='generalized-img'><img src='/assets/images/pretest/weight-loss.jpg' alt='Weight Loss'></div><span class='green-clor img-title'>Weight Loss</span></li><li><div class='generalized-img'><img src='/assets/images/pretest/reduced-appetite.jpg' alt='Reduced Appetite'></div><span class='green-clor img-title'>Reduced Appetite</span></li><li><div class='generalized-img'><img src='/assets/images/pretest/sweating.jpg' alt='Sweating At Night'></div><span class='green-clor img-title'>Sweating At Night</span></li></ul></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-33",
             "buttons": {
                 "backBtn": "Back",
@@ -335,7 +335,7 @@
         "34": {
             "type": "narrative",
             "content": "<h2>Extra Pulmonary Tuberculosis</h2><span class='green-clor subheading-inner'>Localized Symptoms</span><span class='subheading'>Any organ can be involved in TB which exhibits general & Localized Signs & symptom.</span><div class='content-wrapper'><ul class='imglist'><li><div class='list-img'><img src='/assets/images/pretest/swelling.jpg' alt='swelling'></div><span class='green-clor img-title'>Swelling of the Cervical Lymph nodes</span></li><li><div class='list-img'><img src='/assets/images/pretest/chest-pain.jpg' alt='chest-pain'></div><span class='green-clor img-title'>Chest Pain in Pleural TB</span></li><li><div class='list-img'><img src='/assets/images/pretest/joint-pain.jpg' alt='joint-pain'></div><span class='green-clor img-title'>Joint Pain in TB Arthritis</span></li></ul></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-34",
             "buttons": {
                 "backBtn": "Back",
@@ -345,7 +345,7 @@
         "35": {
             "type": "narrative",
             "content": "<h2>Extra Pulmonary Tuberculosis</h2><span class='green-clor subheading-inner'>Localized Symptoms</span><span class='subheading'>Any organ can be involved in TB which exhibits general & Localized Signs & symptom.</span><div class='content-wrapper'><ul class='imglist'><li><div class='list-img'><img src='/assets/images/pretest/headache.jpg' alt='Headache'></div><span class='green-clor img-title'>Headache in TB Meningitis</span></li><li><div class='list-img'><img src='/assets/images/pretest/distention.jpg' alt='distention'></div><span class='green-clor img-title'>Abdominal pain, distention, Diarrhea/constipation in abdominal TB</span></li><li><div class='list-img'><img src='/assets/images/pretest/back-pain.jpg' alt='Back-pain'></div><span class='green-clor img-title'>Back Pain & Radiating Pain in Tb Spine</span></li></ul></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-35",
             "buttons": {
                 "backBtn": "Back",
@@ -355,7 +355,7 @@
         "36": {
             "type": "narrative",
             "content": "<h2>TB Risk Factors</h2><div class='content-wrapper'><div class='clr_box'><span class='circle-logo'><img src='/assets/images/pretest/risk.svg' alt='sustainble-logo'></span><p class='mudim'>Person having weak immune systems are at more risk of developing TB disease than for persons with normal immune systems.</p><p>Generally, persons at high risk for developing TB disease are of two categories.</p></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-36",
             "buttons": {
                 "backBtn": "Back",
@@ -365,7 +365,7 @@
         "37": {
             "type": "narrative",
             "content": "<h2>TB Risk Factor</h2><div class='content-wrapper'><p class='subtitle'>Persons who have a risk of infection with TB bacteria</p><ol class='number-listing'><li>Close contacts of a person with infectious TB disease.</li><li>Children less than 5 years of age.</li><li>Groups with high rates of TB transmission, such as homeless persons, injection drug users, and persons with HIV infection.</li><li>Persons who work or reside with people who are at high risk for TB, in facilities or institutions such as hospitals, homeless shelters, correctional facilities, nursing homes, and residential homes for those with HIV.</li></ol></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-37",
             "buttons": {
                 "backBtn": "Back",
@@ -375,7 +375,7 @@
         "38": {
             "type": "narrative",
             "content": "<h2>TB Risk Factor</h2><span class='subtitle'>Persons with medical conditions that weaken the Immune System</span><div class='content-wrapper'> <div class='report-wrp'><ul class='number-listing'><li>HIV infection (the virus that causes AIDS)</li><li>Substance abuse</li><li>Silicosis</li><li>Diabetes mellitus</li><li>Severe kidney disease</li><li>Low body weight</li><li>Organ transplants</li><li>Head and neck cancer</li><li>Medical treatments such as corticosteroids or organ transplant</li><li>Specialized treatment for rheumatoid arthritis or Crohn’s disease</li></ul></div></div>",
-            "doctor": "",
+            "student": "",
             "className": "module2 module-38",
             "buttons": {
                 "backBtn": "Back",
@@ -384,43 +384,43 @@
         },
         "39": {
             "type": "narrative",
-            "content": "<span class='mape'><img src='/assets/images/pretest/mape.svg' alt='mape'></span><p class='subtitle'>Dear Doctor,</p><p>We have learned the facts of TB. <br/>Now we recall our understanding.</p>",
-            "doctor": "man",
+            "content": "<span class='mape'><img src='/assets/images/pretest/mape.svg' alt='mape'></span><p class='subtitle'>Dear Student,</p><p>We have learned the facts of TB. <br/>Now we recall our understanding.</p>",
+            "student": "man",
             "className": "module-39"
         },
         "40": {
             "type": "interactive",
             "content": "<span class='module-box' id='question-title'><p></p></span><ul class='radio-list' id='options-list'></ul>",
             "question": 1,
-            "doctor": "",
+            "student": "",
             "className": "module module1"
         },
         "41": {
             "type": "interactive",
             "content": "<span class='module-box' id='question-title'><p></p></span><ul class='radio-list' id='options-list'></ul>",
             "question": 2,
-            "doctor": "",
+            "student": "",
             "className": "module module1"
         },
         "42": {
             "type": "interactive",
             "content": "<span class='module-box' id='question-title'><p></p></span><ul class='radio-list' id='options-list'></ul>",
             "question": 3,
-            "doctor": "",
+            "student": "",
             "className": "module module1"
         },
         "43": {
             "type": "interactive",
             "content": "<span class='module-box' id='question-title'><p></p></span><ul class='radio-list' id='options-list'></ul>",
             "question": 4,
-            "doctor": "",
+            "student": "",
             "className": "module module1"
         },
         "44": {
             "type": "exercise",
             "content": "<h4 data-typer='Ms. Yasmin 35 year female entered in your clinic with chest X-Ray.'></h4><div class='symptoms'><span class='chest-pain symptoms-icon-wpr bounce-in animation'><span class='symptoms-icon'><img src='/assets/images/pretest/chest-pain.svg' alt='chest-pain'></span><span class='sub-text'>CHEST PAIN</span><span class='sub-qustion'>yes</span></span><span class='fever symptoms-icon-wpr bounce-in animation'><span class='symptoms-icon'><img src='/assets/images/pretest/fever.svg' alt='fever'></span><span class='sub-text'>FEVER</span><span class='sub-qustion'>yes</span></span><span class='cough symptoms-icon-wpr bounce-in animation'><span class='symptoms-icon'><img src='/assets/images/pretest/cough.svg' alt='COUGH'></span><span class='sub-text'>COUGH</span><span class='sub-qustion'>Since 4 weeks</span></span><span class='shortness-of-breath symptoms-icon-wpr bounce-in animation'><span class='symptoms-icon'><img src='/assets/images/pretest/shortness-of-breath.svg' alt='SHORTNESS OF BREATH'></span><span class='sub-text'>SHORTNESS OF BREATH</span><span class='sub-qustion'>yes</span></span><span class='loss-of-appetite symptoms-icon-wpr bounce-in animation'><span class='symptoms-icon'><img src='/assets/images/pretest/loss-of-appetite.svg' alt='LOSS OF APPETITE'></span><span class='sub-text'>LOSS OF APPETITE</span><span class='sub-qustion'>yes</span></span></div>",
             "question": 5,
-            "doctor": "",
+            "student": "",
             "className": "module1-exercise1",
             "previous": 43,
             "next": 45
@@ -429,7 +429,7 @@
             "type": "exercise",
             "content": "<div class='symptoms'><div class='symptoms-wrp'><span class='cough symptoms-icon-wpr bounce-in animation'><span class='symptoms-icon'><img src='/assets/images/pretest/cough.svg' alt='COUGH'></span><span class='sub-text'>COUGH</span><span class='sub-qustion'>Since 4 weeks</span></span><span class='fever symptoms-icon-wpr bounce-in animation'><span class='symptoms-icon'><img src='/assets/images/pretest/fever.svg' alt='fever'></span><span class='sub-text'>FEVER</span><span class='sub-qustion'>99.8° F</span></span><span class='chest-pain symptoms-icon-wpr bounce-in animation'><span class='symptoms-icon'><img src='/assets/images/pretest/chest-pain.svg' alt='chest-pain'></span><span class='sub-text'>CHEST PAIN</span><span class='sub-qustion'>yes</span></span><span class='shortness-of-breath symptoms-icon-wpr bounce-in animation'><span class='symptoms-icon'><img src='/assets/images/pretest/shortness-of-breath.svg' alt='SHORTNESS OF BREATH'></span><span class='sub-text'>SHORTNESS OF BREATH</span><span class='sub-qustion'>yes</span></span><span class='loss-of-appetite symptoms-icon-wpr bounce-in animation'><span class='symptoms-icon'><img src='/assets/images/pretest/loss-of-appetite.svg' alt='LOSS OF APPETITE'></span><span class='sub-text'>LOSS OF APPETITE</span><span class='sub-qustion'>yes</span></span></div></div><div class='qustion-area'><span class='ex-step-logo'><img src='/assets/images/pretest/logo.png' alt='logo'></span><span class='ex-step-lady-patient'><img src='/assets/images/pretest/step-lady-patient.svg' alt='lady-patient'></span><p></p><div class='slider__dots'><a href='#' class='slider__dot slider__dot_active'></a><a href='#' class='slider__dot'></a></div><div class='border-bottom'></div></div>",
             "question": 5,
-            "doctor": "",
+            "student": "",
             "className": "module1-exercise1 ex2_1 ex-step",
             "previous": 44,
             "next": 0

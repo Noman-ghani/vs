@@ -398,7 +398,7 @@ body .screen-frame .text-box {
     left: 7vw;
 }
 
-.man-doctor {
+.man-student {
     width: 32vw;
     position: absolute;
     bottom: 0;
@@ -517,7 +517,7 @@ body .screen15 .text-box {
     line-height: 1.7;
 }
 
-.lady-doctor {
+.lady-student {
     width: 35vw;
     position: absolute;
     bottom: 0;
@@ -829,7 +829,7 @@ body .screen11 .text-box #content p {
     margin: auto;
 }
 
-body .doctor_sitting {
+body .student_sitting {
     position: absolute;
     right: -35vw;
     bottom: -9px;
@@ -1411,7 +1411,7 @@ body .checkbox.border-red label {
     margin: auto;
 }
 
-.doctor-face {
+.student-face {
     z-index: +99;
     position: absolute;
     bottom: 5.5vw;
@@ -1426,7 +1426,7 @@ body .checkbox.border-red label {
     left: 11.5vw;
 }
 
-.doctor-feedback {
+.student-feedback {
     width: 14.83vw;
     position: absolute;
     bottom: 6.9vw;
@@ -1458,7 +1458,7 @@ body .checkbox.border-red label {
     visibility: visible !important;
 }
 
-.doctor-feedback::before {
+.student-feedback::before {
     content: "";
     right: 2.6vw;
     background: #ebf1f800;
@@ -3331,8 +3331,8 @@ body .screen-frame.module-36 .circle-logo {
         bottom: 72.9vh;
     }
     
-    .lady-doctor,
-    .man-doctor {
+    .lady-student,
+    .man-student {
         width: 27vw;
     }
     
@@ -3606,7 +3606,7 @@ body .screen-frame.module-36 .circle-logo {
         width: 11vw;
     }
     
-    .man-doctor {
+    .man-student {
         width: 20vw;
     }
     
@@ -3803,7 +3803,7 @@ body .screen-frame.module-36 .circle-logo {
     left: -20vw;
     bottom: 38.4vw;
 }
-.set-lady-doctor {
+.set-lady-student {
     position: absolute;
     bottom: 0;
     width: 40vw;
@@ -4033,7 +4033,7 @@ body .screen-frame.module-36 .circle-logo {
 .slider__dot_active {
     background: #247455;
 }
-.ex-step .doctor-face {
+.ex-step .student-face {
     z-index: +99;
     position: absolute;
     bottom: 7.5vw;
@@ -4043,7 +4043,7 @@ body .screen-frame.module-36 .circle-logo {
     transition: all 0.2s;
     transition-duration: 1s;
 }
-.ex-step .doctor-feedback::before {
+.ex-step .student-feedback::before {
     content: "";
     right: 2vw;
     background: #ebf1f800;
@@ -4055,7 +4055,7 @@ body .screen-frame.module-36 .circle-logo {
     width: 0vw;
     transform: skewX(17deg);
 }
-.ex-step .doctor-feedback {
+.ex-step .student-feedback {
     width: 14.83vw;
     position: absolute;
     bottom: 6.9vw;
@@ -4185,7 +4185,7 @@ body .screen-frame.module-36 .circle-logo {
         bottom: 2vw;
     }
     
-    .exercise .set-lady-doctor {
+    .exercise .set-lady-student {
         width: 26vw;
         left: -1vw;
     }
