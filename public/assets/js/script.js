@@ -51,7 +51,7 @@ jQuery(document).ready(function($) {
         $('ul.profile').toggleClass('active-profile');
     });
 
-    $('input:radio[name=std_active]').change(function() {
+    $('input:radio[name=active]').change(function() {
         if (this.value == '1') {
             $(".student").show();
             $(".none-student").hide();
@@ -84,7 +84,7 @@ jQuery(document).ready(function($) {
         $('input[type=submit]').attr('disabled', true);
         let formID = $(this).attr('id');
         let formData = new FormData(this);
-        formData.append('std_active', $("input[name=std_active]:checked").val());
+        formData.append('active', $("input[name=active]:checked").val());
         formData.append('basic_qualification', $('[name="basic_qualification"]', this).val());
         if (formID == 'student_form') {
             formData.append('workplace_type', $('[name="workplace_type"]', this).val());

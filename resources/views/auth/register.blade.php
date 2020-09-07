@@ -15,12 +15,12 @@
                         <label>Are You A Student? <span class="strik">*</span></label>
                         <div class="radio-wrp full-width flex ">
                             <div class="radio">
-                                <input name="std_active" id="std_active_yes" type="radio" value="1" checked="checked">
-                                <label for="std_active_yes" class="radio-label" for="chkYes">Yes</label>
+                                <input name="active" id="active_yes" type="radio" value="1" checked="checked">
+                                <label for="active_yes" class="radio-label" for="chkYes">Yes</label>
                             </div>
                             <div class="radio">
-                                <input name="std_active" id="std_active_no" type="radio" value="0">
-                                <label for="std_active_no" class="radio-label">No</label>
+                                <input name="active" id="active_no" type="radio" value="0">
+                                <label for="active_no" class="radio-label">No</label>
                             </div>
                         </div>
                     </div>

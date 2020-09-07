@@ -25,6 +25,7 @@ Route::post('reset_new_password', '\App\Http\Controllers\Auth\ResetPasswordContr
 
 Route::group(['middleware' => 'frontend'], function () {
     Route::post('/student/register', '\App\Http\Controllers\StudentsController@store');
+    Route::post('/trainer/register', '\App\Http\Controllers\TrainersController@store');
 });
 
 
@@ -42,18 +43,12 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::patch('/profile', '\App\Http\Controllers\UserController@updateProfile');
     Route::get('/getDashboadData', '\App\Http\Controllers\DashboardController@getDashboadData');
 
-    Route::get('/modules', '\App\Http\Controllers\ModulesController@browse');
-    Route::get('/modules/{id}', '\App\Http\Controllers\ModulesController@get_by_id')->where('id', '[0-9]+');
-    Route::post('/modules', '\App\Http\Controllers\ModulesController@store');
-    Route::patch('/modules/{id}', '\App\Http\Controllers\ModulesController@update_by_id')->where('id', '[0-9]+');
-    
     Route::get('/role', '\App\Http\Controllers\RoleController@browse');
     Route::get('/role/edit/{id}', '\App\Http\Controllers\RoleController@get_by_id')->where('id', '[0-9]+');
     Route::post('/role/add', '\App\Http\Controllers\RoleController@store');
     Route::post('/role/edit/{id}', '\App\Http\Controllers\RoleController@update_by_id')->where('id', '[0-9]+');
     Route::post('/role/delete/{id}', '\App\Http\Controllers\RoleController@soft_delete_by_id')->where('id', '[0-9]+');
     
-    Route::get('/capability', '\App\Http\Controllers\RoleController@browse');
     
     Route::get('/permissions', '\App\Http\Controllers\PermissionsController@browse');
     Route::get('/permission/edit/{id}', '\App\Http\Controllers\PermissionsController@get_by_id')->where('id', '[0-9]+');
@@ -63,18 +58,24 @@ Route::group(['middleware' => 'auth:api'], function () {
     
     Route::get('/allowed_permissions/{id}', '\App\Http\Controllers\AllowPermissionsController@get_by_id')->where('id', '[0-9]+');
     
+    Route::get('/categories', '\App\Http\Controllers\CategoriesController@browse');
+    Route::get('/category/edit/{id}', '\App\Http\Controllers\CategoriesController@get_by_id')->where('id', '[0-9]+');
+    Route::post('/category/add', '\App\Http\Controllers\CategoriesController@store');
+    Route::post('/category/edit/{id}', '\App\Http\Controllers\CategoriesController@update_by_id')->where('id', '[0-9]+');
+    Route::post('/category/delete/{id}', '\App\Http\Controllers\CategoriesController@soft_delete_by_id')->where('id', '[0-9]+');
+    
     Route::get('/students', '\App\Http\Controllers\StudentsController@browse');
     Route::get('/student/edit/{id}', '\App\Http\Controllers\StudentsController@get_by_id')->where('id', '[0-9]+');
     Route::post('/student/add', '\App\Http\Controllers\StudentsController@store');
     Route::post('/student/edit/{id}', '\App\Http\Controllers\StudentsController@update_by_id')->where('id', '[0-9]+');
     Route::post('/student/delete/{id}', '\App\Http\Controllers\StudentsController@soft_delete_by_id')->where('id', '[0-9]+');
     
-    Route::get('/pre-result', '\App\Http\Controllers\ResultController@browse');
-    Route::get('/pre-result/view/{id}', '\App\Http\Controllers\ResultController@get_by_id')->where('id', '[0-9]+');
-    Route::get('/post-result', '\App\Http\Controllers\ResultController@browse');
-    Route::get('/post-result/view/{id}', '\App\Http\Controllers\ResultController@get_by_id')->where('id', '[0-9]+');
+    Route::get('/trainers', '\App\Http\Controllers\TrainersController@browse');
+    Route::get('/trainer/edit/{id}', '\App\Http\Controllers\TrainersController@get_by_id')->where('id', '[0-9]+');
+    Route::post('/trainer/add', '\App\Http\Controllers\TrainersController@store');
+    Route::post('/trainer/edit/{id}', '\App\Http\Controllers\TrainersController@update_by_id')->where('id', '[0-9]+');
+    Route::post('/trainer/delete/{id}', '\App\Http\Controllers\TrainersController@soft_delete_by_id')->where('id', '[0-9]+');
     
-    Route::get('/module/{id}', '\App\Http\Controllers\ModulesController@get_file_by_id')->where('id', '[0-9]+');
     
     Route::get('/settings', '\App\Http\Controllers\SettingsController@browse');
     Route::post('/settings/add', '\App\Http\Controllers\SettingsController@store');

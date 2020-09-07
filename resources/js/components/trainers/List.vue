@@ -4,12 +4,12 @@
             <b-container fluid>
                 <b-row class="mb-2">
                     <b-col sm="6">
-                        <h1>Students</h1>
+                        <h1>Trainers</h1>
                     </b-col>
                     <b-col sm="6" style="margin-top: 8px;">
                         
-                        <router-link to='/student/add' class="btn btn-info float-right">
-                            <i class="fa fa-plus"></i> Add New Students
+                        <router-link to='/trainer/add' class="btn btn-info float-right">
+                            <i class="fa fa-plus"></i> Add New Trainers
                         </router-link>
                     </b-col>
                 </b-row>
@@ -58,7 +58,7 @@
                         
                         </th>
                         <th class="min-180">
-                            <span class="cursor-pointer d-flex justify-content-between align-items-center" @click="sort('students.created_at')">Registration Date 
+                            <span class="cursor-pointer d-flex justify-content-between align-items-center" @click="sort('trainers.created_at')">Registration Date 
                         <i class="fa fa-sort"></i></span>
                         </th>
                         
@@ -137,7 +137,7 @@
                         
                         <td>
                                     <b-form-select 
-                                    v-model="search_data.is_student"
+                                    v-model="search_data.is_trainer"
                                     class="search_select_sort"
                                     @change="browse">
                                     <b-form-select-option value="">Select</b-form-select-option>
@@ -159,7 +159,7 @@
                         <td class="text-center" v-show="row.active === 0">No</td>
                         <td class="text-center" v-show="row.active === 1">Yes</td>
                         <td class="text-center action-btns">
-                        <router-link :to="'student/edit/' + row.id" class="btn btn-success">
+                        <router-link :to="'trainer/edit/' + row.id" class="btn btn-success">
                             <i class="fa fa-edit"></i>
                         </router-link>
                        
@@ -198,7 +198,7 @@
                     email: '',
                     created_at: '',
                     cnic: '',
-                    is_student: '',
+                    is_trainer: '',
                     sort_order: false,
                     page:'',
                     record: 10
@@ -232,7 +232,7 @@
                 if(this.$route.query.page){
                     this.search_data.page = this.$route.query.page;
                 }
-                axios.get('students?' + $.param(this.search_data))
+                axios.get('trainers?' + $.param(this.search_data))
                 .then(res => {
                     loader.hide();
                     this.list_data =  res.data.data.data;
@@ -250,7 +250,7 @@
                     okText: 'Delete',
                 })
                 .then((dialog) => {
-                    axios.post('student/delete/' + id)
+                    axios.post('trainer/delete/' + id)
                     .then(response => {
                         this.browse();
                         dialog.close();

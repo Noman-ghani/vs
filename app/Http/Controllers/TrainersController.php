@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Students;
+use App\Models\Trainers;
 use App\User;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Carbon;
@@ -12,14 +12,14 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use App\Http\Controllers\MailController;
 
-class StudentsController extends Controller
+class TrainersController extends Controller
 {
-    private $student;
+    private $trainer;
     private $user;
 
-    public function __construct(Students $student, User $user)
+    public function __construct(Trainers $trainer, User $user)
     {
-        $this->student = $student;
+        $this->trainer = $trainer;
         $this->user = $user;
         $this->message = [
             'mobile_no.regex'                           => 'Only Numbers allow.',
@@ -43,11 +43,11 @@ class StudentsController extends Controller
         $sortRequest = $request->get('sort');
         $sortOrder = $request->get('sort_order') == 'true' ? 'desc' : 'asc';
         
-        $results = Students::with(['user' => function($q){
+        $results = Trainers::with(['user' => function($q){
             $q->select('id', 'firstname','lastname','email', 'is_active')
             ->where('is_deleted',0);
         }])
-        ->join('users','students.user_id','=','users.id')->where('students.is_deleted',0);
+        ->join('users','trainers.user_id','=','users.id')->where('trainers.is_deleted',0);
 
         
         if($request->get('firstname')){
@@ -61,19 +61,19 @@ class StudentsController extends Controller
         }
         if($request->get('created_at')){
             $created_at_request = $request->get('created_at').'%';
-            $results->where('students.created_at', 'like', $created_at_request);
+            $results->where('trainers.created_at', 'like', $created_at_request);
         }
         if($request->get('cnic')){
             $results->where('cnic','like','%' . $request->get('cnic') . '%');
         }
-        if($request->get('is_student') != null){
-            $results->where('active',$request->get('is_student'));
+        if($request->get('is_trainer') != null){
+            $results->where('active',$request->get('is_trainer'));
         }
         
         if ($sortRequest){
             $results->orderBy($sortRequest, $sortOrder);
         }else{
-            $results->orderBy('students.id', 'desc');
+            $results->orderBy('trainers.id', 'desc');
         }
         $results = $results->paginate($record);
         
@@ -106,7 +106,7 @@ class StudentsController extends Controller
             'province'                      => 'required',
             'district'                      => 'required',
             'basic_qualification'           => 'required',
-            'cnic'                          => 'required|unique:students,cnic|min:13|max:15|regex:"^[0-9-]*$"',
+            'cnic'                          => 'required|unique:trainers,cnic|min:13|max:15|regex:"^[0-9-]*$"',
             'password'                      => 'required|confirmed|min:8',
             'password_confirmation'         => 'required',
             'work_experience'               => 'required_if:active,1',
@@ -133,7 +133,7 @@ class StudentsController extends Controller
             );
             $insertedUser = $this->user->create($userData);
             if ($request->image) {
-            $folder = public_path('images/students/' . $insertedUser->id  . '/');
+            $folder = public_path('images/trainers/' . $insertedUser->id  . '/');
            
             if (File::exists($folder)) {
                 File::deleteDirectory($folder);
@@ -145,10 +145,10 @@ class StudentsController extends Controller
             
                 $this->uploadImage($request,$folder);
             }
-            $this->student->user_id = $insertedUser->id;
-            $this->student->fill($request->all());
-            $this->student->other_qualification = $request->other_qualification;
-            $this->student->save();
+            $this->trainer->user_id = $insertedUser->id;
+            $this->trainer->fill($request->all());
+            $this->trainer->other_qualification = $request->other_qualification;
+            $this->trainer->save();
             $name = $request->firstname. ' ' .$request->lastname;
             MailController::congratesEmail(['name' => $name, 'email' => $request->email]);
         }
@@ -160,7 +160,7 @@ class StudentsController extends Controller
     {
         
 
-        $results = Students::with(['user' => function($q) {
+        $results = Trainers::with(['user' => function($q) {
             $q->select('id', 'firstname','lastname','email')
             ->where('is_deleted',0);
         }])
@@ -169,7 +169,7 @@ class StudentsController extends Controller
         
         $results_final =  $results->first(); 
         // dd($results_final);
-        $folder = public_path('images/students/' . $results_final->user->id );
+        $folder = public_path('images/trainers/' . $results_final->user->id );
         
         $image = '';
        
@@ -188,7 +188,7 @@ class StudentsController extends Controller
 
     public function update_by_id(Request $request, $id)
     {
-        $student_id = $this->student::select('id')->where('user_id',$id)->first();
+        $trainer_id = $this->trainer::select('id')->where('user_id',$id)->first();
         
         $TMP_validation = [
             'active'                    => 'required',
@@ -199,7 +199,7 @@ class StudentsController extends Controller
             'province'                      => 'required',
             'district'                      => 'required',
             'basic_qualification'           => 'required',
-            'cnic'                          => 'required|min:13|max:15|regex:"^[0-9-]*$"|unique:App\Models\Students,cnic,'.$student_id->id,
+            'cnic'                          => 'required|min:13|max:15|regex:"^[0-9-]*$"|unique:App\Models\Trainers,cnic,'.$trainer_id->id,
             'password'                      => 'min:8|confirmed|nullable',
             'workplace_type'                => 'required_if:active,1',
             'address_personal_workplace'    => 'required_if:workplace_type,government',
@@ -224,7 +224,7 @@ class StudentsController extends Controller
                 }
                 $usera->save();
                 if ($request->image) {
-                    $folder = public_path('images/students/' . $request->user_id  . '/');
+                    $folder = public_path('images/trainers/' . $request->user_id  . '/');
 
                     if (File::exists($folder)) {
                         File::deleteDirectory($folder);
@@ -238,19 +238,19 @@ class StudentsController extends Controller
                     }
                 }
                 
-                $this->student = $this->student->find($student_id->id);
-                $this->student->fill($request->all());
+                $this->trainer = $this->trainer->find($trainer_id->id);
+                $this->trainer->fill($request->all());
                 if($request->alternate_contact_no == "null"){
-                    $this->student->alternate_contact_no = null;
+                    $this->trainer->alternate_contact_no = null;
                 }
                 if($request->pmdc_registration_number == "null"){
-                    $this->student->pmdc_registration_number = null;
+                    $this->trainer->pmdc_registration_number = null;
                 }
                 if($request->password == "null"){
-                    $this->student->password = null;
+                    $this->trainer->password = null;
                 }
-                $this->student->other_qualification = $request->other_qualification;
-                $this->student->save();
+                $this->trainer->other_qualification = $request->other_qualification;
+                $this->trainer->save();
             }
         return response()->json(['success' => true], 200);
     }
@@ -266,11 +266,11 @@ class StudentsController extends Controller
 
     public function soft_delete_by_id(Request $request, $id)
     {
-        $this->student = $this->student->find($id);
-        $this->student->is_deleted = 1;
-        $this->student->save();
+        $this->trainer = $this->trainer->find($id);
+        $this->trainer->is_deleted = 1;
+        $this->trainer->save();
         
-        $user = $this->user->where('id',$this->student->user_id)->first();
+        $user = $this->user->where('id',$this->trainer->user_id)->first();
         $user->is_deleted = 1;
         $user->save();
     }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Students extends Migration
+class CreateTrainers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,7 @@ class Students extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('students')) {
-            Schema::create('students', function (Blueprint $table) {
+        Schema::create('trainers', function (Blueprint $table) {
                 $table->id();
                 $table->boolean('active');
                 $table->unsignedInteger('user_id');
@@ -31,8 +30,7 @@ class Students extends Migration
                 $table->integer('is_deleted')->default(0);
                 $table->timestamp('deleted_at')->nullable();
                 $table->timestamps();
-            });
-        }
+        });
     }
 
     /**
@@ -42,6 +40,6 @@ class Students extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('students');
+        Schema::dropIfExists('trainers');
     }
 }

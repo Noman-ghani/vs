@@ -13,15 +13,15 @@ class DashboardController extends Controller
     {
         
         $results = \App\Models\Students::select(DB::raw("(COUNT(id)) as totalRegister"),
-            DB::raw("sum(case when std_active = 1 then 1 else 0 end) isStudent"),
-            DB::raw("sum(case when std_active = 0 then 1 else 0 end) nonStudent")
+            DB::raw("sum(case when active = 1 then 1 else 0 end) isStudent"),
+            DB::raw("sum(case when active = 0 then 1 else 0 end) nonStudent")
 
         );
         
         $bardata = \App\Models\Students::select(
             DB::raw("(COUNT(id)) as registered"),
-            DB::raw("sum(case when std_active = 1 then 1 else 0 end) is_student"),
-            DB::raw("sum(case when std_active = 0 then 1 else 0 end) non_student"),
+            DB::raw("sum(case when active = 1 then 1 else 0 end) is_student"),
+            DB::raw("sum(case when active = 0 then 1 else 0 end) non_student"),
             DB::raw("sum(case when province = 1 then 1 else 0 end) from_province"),
             DB::raw("DATE_FORMAT(created_at, '%b') as monthname"),
             DB::raw("DATE_FORMAT(created_at, '%y %m') as monthId")

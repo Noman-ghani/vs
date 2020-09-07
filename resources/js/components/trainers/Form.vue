@@ -4,17 +4,17 @@
             <b-container fluid>
                 <b-row class="mb-2">
                     <b-col sm="6">
-                        <h1 v-if="this.$route.params.id">Edit Student</h1>
-                        <h1 v-else>Add Student</h1>
+                        <h1 v-if="this.$route.params.id">Edit Trainer</h1>
+                        <h1 v-else>Add Trainer</h1>
                     </b-col>
                     <b-col class="col-sm-6">
-                        <router-link to="/students" v-if="this.$route.params.id" class="btn btn-success float-right">Go Back</router-link>
+                        <router-link to="/trainers" v-if="this.$route.params.id" class="btn btn-success float-right">Go Back</router-link>
                     </b-col>
                 </b-row>
             </b-container>
         </section>
         <section class="content">
-            <b-form v-on:submit.prevent="addStudent">
+            <b-form v-on:submit.prevent="addTrainer">
                 <div class="card">
                     <div class="card-body">
                     <div class="row">
@@ -359,7 +359,7 @@
         methods: {
             fetchDataByID: function() {
                  let loader = this.$loading.show();
-               axios.get('/student/edit/'+this.$route.params.id)
+               axios.get('/trainer/edit/'+this.$route.params.id)
                 .then(response => {
                     loader.hide();
                     console.log(response.data)
@@ -420,15 +420,15 @@
                     this.half_col = "col-sm-12";
                 }
             },
-            addStudent: function (div) {
+            addTrainer: function (div) {
                let loader = this.$loading.show({
 
                });
                 console.log(this.post.basic_qualification);
                 
-               var url = '/student/add'
+               var url = '/trainer/add'
                     if(this.$route.params.id){
-                        url = '/student/edit/'+this.$route.params.id
+                        url = '/trainer/edit/'+this.$route.params.id
                     }
                 const formData = new FormData();
                 if(this.$route.params.id){
@@ -461,11 +461,11 @@
                     this.error = '';
                     loader.hide();
                     if(this.$route.params.id){
-                     this.$root.$emit('alertify', {type: 'success', message: 'Student updated Successfully'});
+                     this.$root.$emit('alertify', {type: 'success', message: 'Trainer updated Successfully'});
                     }else{
-                        this.$root.$emit('alertify', {type: 'success', message: 'Student added Successfully'});
+                        this.$root.$emit('alertify', {type: 'success', message: 'Trainer added Successfully'});
                     }
-                    this.$router.push({ name: "student" });
+                    this.$router.push({ name: "trainer" });
                 })
                 .catch((err) => {
                     this.error = err.response.data.errors
@@ -499,7 +499,7 @@
                 this.post.password_confirmation =  ''
 
             },
-            isStudent: function ($status) {
+            isTrainer: function ($status) {
                 console.log(this.post.firstname);
                 
                 if(this.post.firstname !=  '' || this.post.lastname !=  '' || this.post.email !=  '' || this.post.mobile_no !=  '' || this.post.alternate_contact_no !=  '' || this.post.province !=  '' || this.post.district !=  '' || this.post.basic_qualification !=  '' || this.post.other_qualification !=  '' || this.post.workplace_type !=  '' || this.post.address_government_hospital !=  '' || this.post.address_personal_workplace !=  '' || this.post.work_experience !=  '' || this.post.cnic !=  '' || this.post.pmdc_registration_number !=  '' || this.post.password !=  '' || this.post.password_confirmation !=  ''){

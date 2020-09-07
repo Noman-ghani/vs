@@ -137,6 +137,60 @@ const routes = [
         }
     },
     {
+        name: 'trainer',
+        path: '/trainers',
+        component: () =>
+            import ('./components/trainers/List.vue'),
+        meta: {
+            layout: ThemeLayout,
+        }
+    },
+    {
+        name: 'trainer_add',
+        path: '/trainer/add',
+        component: () =>
+            import ('./components/trainers/Form.vue'),
+        meta: {
+            layout: ThemeLayout,
+        }
+    },
+    {
+        name: 'trainer_edit',
+        path: '/trainer/edit/:id',
+        component: () =>
+            import ('./components/trainers/Form.vue'),
+        meta: {
+            layout: ThemeLayout,
+        }
+    },
+    {
+        name: 'categories',
+        path: '/categories',
+        component: () =>
+            import ('./components/categories/List.vue'),
+        meta: {
+            layout: ThemeLayout,
+        }
+    },
+    {
+        name: 'category_add',
+        path: '/category/add',
+        component: () =>
+            import ('./components/categories/Form.vue'),
+        meta: {
+            layout: ThemeLayout,
+        }
+    },
+    {
+        name: 'category_edit',
+        path: '/category/edit/:id',
+        component: () =>
+            import ('./components/categories/Form.vue'),
+        meta: {
+            layout: ThemeLayout,
+        }
+    },
+    {
         name: 'settings',
         path: '/settings',
         component: () =>

@@ -7,9 +7,21 @@
             </router-link>
         </li>
         <li class="nav-item">
+            <router-link to='/categories' :class="'nav-link ' + ((this.$route.name == 'categories'||this.$route.name == 'category_add'||this.$route.name == 'category_edit') ? 'active' : '')">
+                <i class="nav-icon fa fa-user-md"></i>
+                <p>Categories</p>
+            </router-link>
+        </li>
+        <li class="nav-item">
             <router-link to='/students' :class="'nav-link ' + ((this.$route.name == 'student'||this.$route.name == 'student_add'||this.$route.name == 'student_edit') ? 'active' : '')">
                 <i class="nav-icon fa fa-user-md"></i>
                 <p>Students</p>
+            </router-link>
+        </li>
+        <li class="nav-item">
+            <router-link to='/trainers' :class="'nav-link ' + ((this.$route.name == 'trainer'||this.$route.name == 'trainer_add'||this.$route.name == 'trainer_edit') ? 'active' : '')">
+                <i class="nav-icon fa fa-user-md"></i>
+                <p>Trainers</p>
             </router-link>
         </li>
          <li class="nav-item">

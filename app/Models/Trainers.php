@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Students extends Model
+class Trainers extends Model
 {
     protected $fillable = [
-        'active'              ,
+        'active'                    ,
         'mobile_no'                   ,
         'alternate_contact_no'        ,
         'cnic'                        ,
